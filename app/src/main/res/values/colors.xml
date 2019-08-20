@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorGradient">#B44D81</color>
+    <color name="editTextColor">#7B3967</color>
+    <color name="buttonColor">#fff</color>
+    <color name="notiColor">#34A853</color>
+    <color name="clearNotiColor">#B4C2D3</color>
+    <color name="gradient">#B44D81</color>
+    <color name="orange">#E4504D</color>
+    <color name="white">#fff</color>
+    <color name="violet">#42254D</color>
+    <color name="yellowOrange">#E4504D</color>
+</resources>
