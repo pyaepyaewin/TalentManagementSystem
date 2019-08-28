@@ -13,4 +13,17 @@
     <color name="white">#fff</color>
     <color name="violet">#42254D</color>
     <color name="yellowOrange">#E4504D</color>
+    <color name="grey">#747474</color>
+    <color name="assignmentTextColor">#096B91</color>
+    <color name="activityTextColor">#82C6E6</color>
+    <color name="scheduleTextColor">#FF7950</color>
+    <color name="feedbackTextColor">#FFCD00</color>
+    <color name="teacherTextColor">#3F3F3F</color>
+    <color name="aboutUsTextColor">#8DC11B</color>
+    <color name="articleColor">#878686</color>
+    <color name="bold">#010205</color>
+    <color name="backColor">#C4C4C4</color>
+    <color name="darkBlue">#42254D</color>
+
+
 </resources>

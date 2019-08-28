@@ -1,15 +1,11 @@
 package com.example.talentmanagementsystem.ui.adapter.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.talentmanagementsystem.R
-import com.example.talentmanagementsystem.database.ActivitiesDataClass
 import com.example.talentmanagementsystem.network_response.Activity.Data
-import com.example.talentmanagementsystem.ui.activities.DetailActivitiesActivity
 import com.example.talentmanagementsystem.ui.adapter.viewholder.ActivitiesViewHolder
-import kotlinx.android.synthetic.main.activity_main.*
 
 class ActivitiesAdapter(private val onClick:(notice:Data)->Unit):RecyclerView.Adapter<ActivitiesViewHolder>()
 

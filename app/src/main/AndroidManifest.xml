@@ -11,7 +11,20 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true">
+        <activity android:name=".ui.activities.PinCodeActivity">
+        </activity>
+        <activity android:name=".ui.activities.InfoActivity">
+        </activity>
+        <activity android:name=".ui.activities.Teacher.TeacherDetailActivity">
+        </activity>
+        <activity android:name=".ui.activities.LoginActivity">
+        </activity>
+        <activity android:name=".ui.activities.Teacher.TeacherActivity">
+        </activity>
+        <activity android:name=".ui.activities.CreateFeedbackActivity">
+        </activity>
         <activity android:name=".ui.activities.FeedbackActivity">
         </activity>
         <activity android:name=".ui.activities.ScheduleActivity">
@@ -20,17 +33,18 @@
         </activity>
         <activity android:name=".ui.activities.ChangePasswordActivity">
         </activity>
-        <activity android:name=".ui.activities.DetailActivitiesActivity">
+        <activity android:name=".ui.activities.Activity.DetailActivitiesActivity">
         </activity>
-        <activity android:name=".ui.activities.ActivitiesActivity">
+        <activity android:name=".ui.activities.Activity.ActivitiesActivity">
         </activity>
         <activity android:name=".ui.activities.ProfileActivity">
         </activity>
         <activity android:name=".ui.activities.RegisterActivity">
         </activity>
         <activity android:name=".ui.activities.MainActivity">
+
         </activity>
-        <activity android:name=".ui.activities.LoginActivity">
+        <activity android:name=".ui.activities.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

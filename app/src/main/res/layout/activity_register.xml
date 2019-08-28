@@ -26,7 +26,7 @@
                        android:layout_height="120dp"
                        android:layout_gravity="center"
                        android:src="@drawable/talent"
-                       android:scaleType="center"
+                       android:scaleType="centerInside"
             />
         </androidx.cardview.widget.CardView>
 
@@ -40,17 +40,17 @@
                   android:layout_marginTop="8dp"
         />
         <EditText
-                android:id="@+id/edtName"
-                android:layout_width="350dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:hint="name"
-                android:textColorHint="@color/white"
-                android:fontFamily="@font/apercu_light"
-                android:paddingLeft="15dp"
-                android:textSize="24sp"
-                android:background="@drawable/edittextround"/>
+            android:id="@+id/edtName"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:hint="name"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/apercu_light"
+            android:paddingLeft="15dp"
+            android:textSize="24sp"
+            android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtEmail1"
                 android:layout_width="350dp"
@@ -105,8 +105,8 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
               android:background="@drawable/edittextround"
-
                 android:layout_marginTop="15dp"
+
         />
         <EditText
                 android:id="@+id/edtDob"
@@ -140,22 +140,11 @@
                 android:layout_gravity="center"
                 android:background="@drawable/buttonround"
                 android:layout_marginTop="15dp"
-                android:text="register"
+                android:text="Register"
                 android:fontFamily="@font/apercu_regular"
                 android:textColor="@color/colorGradient"
+                android:textAllCaps="false"
         />
-        <Button
-                android:id="@+id/btnBack"
-                android:layout_width="350dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:background="@drawable/buttonround"
-                android:layout_marginTop="15dp"
-                android:text="Back To Login"
-                android:fontFamily="@font/apercu_regular"
-                android:textColor="@color/colorGradient"
-        />
-
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </ScrollView>

@@ -1,7 +1,7 @@
 package com.example.talentmanagementsystem.network_response.Activity
 
 data class ActivityResponse(
-    val `data`: List<Data>,
+    val data: List<Data>,
     val code: Int,
     val duration: Double,
     val errors: Errors,

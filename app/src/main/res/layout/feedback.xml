@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical">
     <androidx.cardview.widget.CardView
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="5dp">
         <TextView
                 android:id="@+id/feedbackTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Toilet Issue"
                 android:fontFamily="@font/apercu_bold"
-                android:textSize="24sp"
+                android:textSize="19sp"
+                android:textColor="@color/bold"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"/>
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:text="comment by"
                   android:fontFamily="@font/apercu_regular"
-                  android:textSize="20sp"
+                  android:textSize="15sp"
                   android:textColor="@color/clearNotiColor"
                   android:layout_marginStart="20dp"
                   android:layout_marginTop="40dp"
@@ -33,9 +36,9 @@
                 android:layout_height="wrap_content"
                 android:text=" Student No Name"
                 android:fontFamily="@font/apercu_regular"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textColor="@color/notiColor"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="120dp"
                 android:layout_marginTop="40dp"
         />
         <TextView
@@ -45,7 +48,7 @@
                 android:text="Jul 7"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/apercu_regular"
-                android:textSize="14sp"
+                android:textSize="11sp"
                 android:layout_marginStart="300dp"
                 android:textColor="#A39696"/>
         <TextView
@@ -54,9 +57,10 @@
                   android:layout_height="wrap_content"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         android:fontFamily="@font/apercu_regular"
-        android:textSize="20sp"
-        android:layout_marginTop="70dp"
+        android:textSize="12sp"
+        android:layout_marginTop="60dp"
         android:layout_marginStart="20dp"
+                android:paddingBottom="8dp"
         />
 
     </androidx.cardview.widget.CardView>

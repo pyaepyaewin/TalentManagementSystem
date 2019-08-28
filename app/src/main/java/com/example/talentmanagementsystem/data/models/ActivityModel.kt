@@ -4,8 +4,9 @@ import com.example.talentmanagementsystem.network_response.Activity.ActivityResp
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.internal.operators.single.SingleDoOnSuccess
+import io.reactivex.schedulers.Schedulers
 import rx.Scheduler
-import rx.schedulers.Schedulers
+
 
 class ActivityModel :BaseModel(){
     private var INSTANCE:ActivityModel?=null
@@ -20,10 +21,10 @@ class ActivityModel :BaseModel(){
         }
         return INSTANCE!!
     }
-    fun loadActivityData(onSuccess:(response:ActivityResponse)->Unit,onError:(error:Throwable)->Unit)
+    fun loadActivityData(onSuccess:(response:ActivityResponse)->Unit,onError:(error:Throwable)->Unit, token:String)
     {
-        disposable.add(mApiService.loadActivities()
-            .subscribeOn(io.reactivex.schedulers.Schedulers.io())
+        disposable.add(mApiService.loadActivities(token)
+            .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 {

@@ -11,22 +11,23 @@ import java.util.concurrent.TimeUnit
 
 abstract class BaseModel {
     protected lateinit var mApiService: ApiService
+
     init {
         initItemListAPI()
     }
-    private fun initItemListAPI()
-    {
-       val okHttpClient = OkHttpClient.Builder()
-           .connectTimeout(60,TimeUnit.SECONDS)
-           .writeTimeout(60,TimeUnit.SECONDS)
-           .readTimeout(60,TimeUnit.SECONDS)
-           .build()
-        val retrofit= Retrofit.Builder()
+
+    private fun initItemListAPI() {
+        val okHttpClient = OkHttpClient.Builder()
+            .connectTimeout(60, TimeUnit.SECONDS)
+            .writeTimeout(60, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS)
+            .build()
+        val retrofit = Retrofit.Builder()
             .baseUrl(AppConstants.base_url)
             .addConverterFactory(GsonConverterFactory.create(Gson()))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
             .build()
-mApiService=retrofit.create(ApiService::class.java)
+        mApiService = retrofit.create(ApiService::class.java)
     }
 }

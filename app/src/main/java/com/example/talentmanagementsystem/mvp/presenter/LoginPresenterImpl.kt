@@ -1,19 +1,37 @@
 package com.example.talentmanagementsystem.mvp.presenter
 
-import android.widget.Toast
+import android.content.Context
+import com.example.talentmanagementsystem.data.models.LoginModel
+import com.example.talentmanagementsystem.data.models.SharedPreference
 import com.example.talentmanagementsystem.mvp.contract.LoginContract
+import com.example.talentmanagementsystem.network_response.Login.Data
+import com.example.talentmanagementsystem.network_response.Login.LoginResponse
 
-class LoginPresenterImpl : LoginContract.LoginPresenter {
+class LoginPresenterImpl(val context: Context):LoginContract.LoginPresenter {
     private lateinit var loginView: LoginContract.LoginView
+
+    private val loginModel: LoginModel by lazy {
+        LoginModel.getInstance()
+    }
+
     override fun attachView(view: LoginContract.LoginView) {
         this.loginView = view
-
     }
 
-    override fun checkValidate(email: String, password: String) {
-        if (email.equals("aa") && password.equals("123456")) {
-            loginView.goToMainPage()
-        } else
-            loginView.showError("Enter validate email and password")
+    override fun loadLogin(email: String, password: String) {
+        loginModel.login(email, password, {
+            if (it.code == 200) {
+                loginView.loginSuccess(it.data)
+                SharedPreference.getInstance(context).saveUserId(it.data.id)
+                SharedPreference.getInstance(context).saveToken(it.data.token)
+              SharedPreference.getInstance(context).setIsLogin("login",true)
+
+            }else {
+                loginView.loginFail("Login Fail")
+            }
+        }, {
+            loginView.loginFail("Login Fail")
+        })
     }
+
 }

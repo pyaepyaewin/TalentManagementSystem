@@ -20,7 +20,7 @@
                    android:layout_height="120dp"
                    android:layout_gravity="center"
                    android:src="@drawable/talent"
-                   android:scaleType="center"
+                   android:scaleType="centerInside"
         />
     </androidx.cardview.widget.CardView>
 
@@ -65,6 +65,7 @@
             android:background="@drawable/buttonround"
             android:layout_marginTop="15dp"
             android:text="Log in"
+            android:textAllCaps="false"
             android:fontFamily="@font/apercu_regular"
             android:textColor="@color/colorGradient"/>
     <Button
@@ -75,6 +76,7 @@
             android:background="@drawable/buttonround"
             android:layout_marginTop="15dp"
             android:text="Register"
+            android:textAllCaps="false"
             android:fontFamily="@font/apercu_regular"
             android:textColor="@color/colorGradient"/>
 

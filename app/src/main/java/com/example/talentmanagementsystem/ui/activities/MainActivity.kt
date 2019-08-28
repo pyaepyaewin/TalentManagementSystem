@@ -7,6 +7,8 @@ import android.os.Bundle
 import com.example.talentmanagementsystem.R
 import com.example.talentmanagementsystem.mvp.contract.MainContract
 import com.example.talentmanagementsystem.mvp.presenter.MainPresenterImpl
+import com.example.talentmanagementsystem.ui.activities.Activity.ActivitiesActivity
+import com.example.talentmanagementsystem.ui.activities.Teacher.TeacherActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainContract.MainView {
@@ -16,11 +18,13 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
     }
 
     override fun goToTeacherPage() {
-
+        intent = Intent(this, TeacherActivity::class.java)
+        startActivity(intent)
     }
 
     override fun goToInfoPage() {
-
+        intent=Intent(this,InfoActivity::class.java)
+        startActivity(intent)
     }
 
     override fun goToSchedulePage() {
@@ -73,6 +77,12 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
         }
         feedback.setOnClickListener {
             goToFeedbackPage()
+        }
+        teacher.setOnClickListener {
+            goToTeacherPage()
+        }
+        aboutUs.setOnClickListener {
+            goToInfoPage()
         }
     }
 }

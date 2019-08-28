@@ -1,5 +1,7 @@
 package com.example.talentmanagementsystem.network_response.Activity
 
+import java.io.Serializable
+
 data class Data(
     val activity_date: String,
     val activity_type_id: Int,
@@ -11,4 +13,4 @@ data class Data(
     val speaker: String,
     val title: String,
     val updated_at: Any
-)
+) : Serializable

@@ -23,13 +23,24 @@
                 android:textSize="30sp"
                 android:layout_marginStart="20dp"
         />
+
+        <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alex"
+                android:fontFamily="@font/apercu_bold"
+                android:layout_marginTop="30dp"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp"
+        />
         <androidx.cardview.widget.CardView
                 android:id="@+id/cardProfile"
                 android:layout_width="70dp"
                                            android:layout_height="70dp"
                                            app:cardCornerRadius="35dp"
                                            android:layout_marginTop="20dp"
-                                           android:layout_marginStart="170dp">
+                                           android:layout_marginStart="100dp">
             <ImageView
                     android:id="@+id/profile"
                     android:layout_width="wrap_content"
@@ -74,6 +85,7 @@
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:text="Assignment"
+                              android:textColor="@color/assignmentTextColor"
                               android:fontFamily="@font/apercu_regular"
 
                               android:layout_gravity="center"
@@ -104,6 +116,7 @@
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:text="Activity"
+                              android:textColor="@color/activityTextColor"
                               android:layout_gravity="center"
                               android:fontFamily="@font/apercu_regular"
 
@@ -133,6 +146,7 @@
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:text="Schedule"
+                              android:textColor="@color/scheduleTextColor"
                               android:fontFamily="@font/apercu_regular"
                     android:layout_gravity="center"/>
 
@@ -165,6 +179,7 @@
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:text="Feedback"
+                              android:textColor="@color/feedbackTextColor"
                               android:fontFamily="@font/apercu_regular"
                               android:layout_gravity="center"/>
 
@@ -191,6 +206,7 @@
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:text="Teacher"
+                              android:textColor="@color/teacherTextColor"
                               android:layout_gravity="center"
                               android:fontFamily="@font/apercu_regular"
                     />
@@ -213,12 +229,13 @@
                        >
                     <ImageView android:layout_width="50dp"
                                android:layout_height="50dp"
-                               android:src="@drawable/info"
+                               android:src="@drawable/aboutus"
                                android:layout_gravity="center"/>
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                              android:layout_gravity="center"
                               android:text="About us"
+                              android:textColor="@color/aboutUsTextColor"
                     android:fontFamily="@font/apercu_regular"/>
 
                 </LinearLayout>

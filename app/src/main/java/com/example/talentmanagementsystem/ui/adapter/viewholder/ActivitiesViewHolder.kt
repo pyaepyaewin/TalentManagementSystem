@@ -18,6 +18,8 @@ class ActivitiesViewHolder(
             time.text = data.activity_date
             Picasso.get().load(data.image).into(view.image)
             setOnClickListener {
+                onClick(data)
+
             }
         }
     }

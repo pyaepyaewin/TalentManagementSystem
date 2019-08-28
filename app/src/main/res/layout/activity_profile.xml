@@ -13,7 +13,7 @@
             app:cardCornerRadius="25dp"
             android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
-            app:cardBackgroundColor="@color/clearNotiColor">
+            app:cardBackgroundColor="@color/backColor">
         <ImageView
                 android:id="@+id/arrow"
                 android:layout_width="match_parent"
@@ -175,6 +175,7 @@
                     android:fontFamily="@font/apercu_regular"
                     android:background="@color/gradient"
                     android:textColor="@color/white"
+                    android:textAllCaps="false"
 
             />
         </androidx.cardview.widget.CardView>
@@ -192,6 +193,7 @@
                     android:fontFamily="@font/apercu_regular"
                     android:background="@color/orange"
                     android:textColor="@color/white"
+                    android:textAllCaps="false"
 
             />
         </androidx.cardview.widget.CardView>

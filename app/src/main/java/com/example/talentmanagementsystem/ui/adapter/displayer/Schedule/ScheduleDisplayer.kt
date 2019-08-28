@@ -4,7 +4,7 @@ import android.view.View
 import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ItemDisplayer
 import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ViewType
 
-class ScheduleDisplayer: ItemDisplayer {
+class ScheduleDisplayer(): ItemDisplayer {
     override fun getViewType(): ViewType =
         ViewType.TODAY
 

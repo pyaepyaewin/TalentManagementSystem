@@ -1,15 +1,24 @@
 package com.example.talentmanagementsystem.mvp.contract
 
+import android.os.Message
+import com.example.talentmanagementsystem.network_response.Login.Data
+
 interface LoginContract {
     interface LoginView
     {
-        fun showError(error:String)
+        fun loginSuccess(user: Data)
         fun goToMainPage()
-        fun goToRegisterPage()
+        fun goToPinCodePage()
+        fun loginFail(message: String)
+
     }
     interface LoginPresenter
     {
         fun attachView(view: LoginView)
-        fun checkValidate(email:String,password:String)
+
+        fun loadLogin(email:String,password: String)
+
+
+
     }
 }
