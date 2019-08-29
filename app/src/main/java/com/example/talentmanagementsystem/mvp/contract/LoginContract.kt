@@ -7,9 +7,8 @@ interface LoginContract {
     interface LoginView
     {
         fun loginSuccess(user: Data)
-        fun goToMainPage()
-        fun goToPinCodePage()
         fun loginFail(message: String)
+        fun goToPinCodePage()
 
     }
     interface LoginPresenter

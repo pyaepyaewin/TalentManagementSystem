@@ -24,8 +24,7 @@
     <androidx.cardview.widget.CardView android:layout_width="100dp"
                                        android:layout_height="100dp"
                                        app:cardCornerRadius="50dp"
-                                       android:layout_marginStart="150dp"
-                                       android:layout_marginTop="50dp">
+                                       android:layout_centerHorizontal="true" android:layout_marginTop="50dp">
         <ImageView
                 android:id="@+id/userProfile"
                 android:layout_width="match_parent"
@@ -33,13 +32,17 @@
                 android:src="@drawable/avi"/>
     </androidx.cardview.widget.CardView>
 
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Chan Myae Khine"
-              android:textSize="24sp"
-              android:fontFamily="@font/apercu_regular"
-              android:layout_marginTop="150dp"
-              android:layout_marginStart="100dp"/>
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chan Myae Khine"
+            android:textSize="24sp"
+            android:fontFamily="@font/apercu_regular"
+            android:layout_marginTop="160dp"
+            android:layout_centerHorizontal="true"
+
+    />
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="Track"

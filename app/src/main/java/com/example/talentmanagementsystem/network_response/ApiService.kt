@@ -1,6 +1,7 @@
 package com.example.talentmanagementsystem.network_response
 
 import com.example.talentmanagementsystem.network_response.Activity.ActivityResponse
+import com.example.talentmanagementsystem.network_response.Assignment.AssignmentResponse
 import com.example.talentmanagementsystem.network_response.ChangePasw.ChangePaswResponse
 import com.example.talentmanagementsystem.network_response.Login.LoginResponse
 import com.example.talentmanagementsystem.network_response.PinCode.PinCodeResponse
@@ -45,5 +46,7 @@ interface ApiService {
                  @Field("phone")phone:String,
                  @Field("address")address:String):Observable<RegisterResponse>
 
+//    @GET("students/assignments/SharedPreference.getUserId/list")
+//    fun loadAssignmentData(@Header("Authorization") token : String): Observable<AssignmentResponse>
 
 }

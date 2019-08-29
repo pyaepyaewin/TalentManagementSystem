@@ -6,8 +6,8 @@ import java.sql.Date
 interface RegisterContract {
     interface RegisterView
     {
-        fun goToLoginPage()
-        fun registerSuccess(user:Data)
+        //fun goToLoginPage()
+        fun registerSuccess(message: String)
         fun registerFail(message: String)
     }
     interface RegisterPresenter

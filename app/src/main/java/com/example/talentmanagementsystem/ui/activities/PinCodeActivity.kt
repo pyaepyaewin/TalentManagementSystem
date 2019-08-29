@@ -13,6 +13,7 @@ import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.util.Log
+import android.view.WindowManager
 
 
 class PinCodeActivity : AppCompatActivity(), PinCodeContract.PinCodeView {
@@ -36,7 +37,6 @@ class PinCodeActivity : AppCompatActivity(), PinCodeContract.PinCodeView {
         for (list in user) {
             myList.add(list.name)
         }
-        Log.d("Success*************", myList[0])
 
         intent = Intent(this, RegisterActivity::class.java)
         intent.putExtra(EXTRA_STRING, myList)
@@ -47,6 +47,7 @@ class PinCodeActivity : AppCompatActivity(), PinCodeContract.PinCodeView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.talentmanagementsystem.R.layout.activity_pin_code)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         pinCodePresenter.attachView(this)
         btnSave.setOnClickListener {
             var pin = edtCode.text.toString()

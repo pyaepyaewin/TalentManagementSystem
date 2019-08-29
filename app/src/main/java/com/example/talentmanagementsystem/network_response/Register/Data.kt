@@ -7,7 +7,7 @@ data class Data(
     val email: String,
     val id: Int,
     val message: String,
-    val module_id: String,
+    val module_id: Int,
     val name: String,
     val phone: String,
     val updated_at: String

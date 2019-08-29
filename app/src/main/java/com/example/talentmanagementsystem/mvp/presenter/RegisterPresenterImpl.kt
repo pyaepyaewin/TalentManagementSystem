@@ -28,17 +28,16 @@ class RegisterPresenterImpl:RegisterContract.RegisterPresenter {
     address:String
     ) {
         registerModel.register(name,email,password,confirm_password,phone,date_of_birth,module_id,address,
+            {
+
+                    registerView.registerSuccess("Wait admin Verify")
+            },
+
         {
-                        if (it.code == 201) {
-              registerView.registerSuccess(it.data)
 
-
-            }else {
-                registerView.registerFail("Wait admin Verify")
-            }
-        }, {
-           registerView.registerFail("Register Fail")
         })
+    }
 
-        }}
 
+
+}

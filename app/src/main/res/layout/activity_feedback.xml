@@ -71,19 +71,18 @@ android:orientation="vertical">
     android:layout_marginTop="150dp"/>
 <androidx.cardview.widget.CardView android:layout_width="50dp"
                                    android:layout_height="50dp"
-                                   android:layout_marginTop="550dp"
-                                   android:layout_marginStart="300dp"
-                                   app:cardCornerRadius="20dp"
->
+                                   android:layout_marginTop="580dp"
+                                   android:layout_marginStart="320dp"
+                                   app:cardCornerRadius="20dp">
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:src="@drawable/add"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:clickable="true"
             android:id="@+id/floatingActionButton"
             android:backgroundTint="@color/notiColor"
-            android:scaleType="center"
-   />
+            android:scaleType="centerInside"/>
 </androidx.cardview.widget.CardView>
 
 

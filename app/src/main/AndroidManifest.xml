@@ -13,6 +13,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
+        <activity android:name=".ui.activities.Assignment.AssignmentDetailActivity">
+        </activity>
         <activity android:name=".ui.activities.PinCodeActivity">
         </activity>
         <activity android:name=".ui.activities.InfoActivity">
@@ -29,7 +31,7 @@
         </activity>
         <activity android:name=".ui.activities.ScheduleActivity">
         </activity>
-        <activity android:name=".ui.activities.AssignmentActivity">
+        <activity android:name=".ui.activities.Assignment.AssignmentActivity">
         </activity>
         <activity android:name=".ui.activities.ChangePasswordActivity">
         </activity>
@@ -42,7 +44,6 @@
         <activity android:name=".ui.activities.RegisterActivity">
         </activity>
         <activity android:name=".ui.activities.MainActivity">
-
         </activity>
         <activity android:name=".ui.activities.WelcomeActivity">
             <intent-filter>

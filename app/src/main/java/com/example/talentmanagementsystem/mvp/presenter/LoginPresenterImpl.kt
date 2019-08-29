@@ -7,7 +7,7 @@ import com.example.talentmanagementsystem.mvp.contract.LoginContract
 import com.example.talentmanagementsystem.network_response.Login.Data
 import com.example.talentmanagementsystem.network_response.Login.LoginResponse
 
-class LoginPresenterImpl(val context: Context):LoginContract.LoginPresenter {
+class LoginPresenterImpl(val context: Context) : LoginContract.LoginPresenter {
     private lateinit var loginView: LoginContract.LoginView
 
     private val loginModel: LoginModel by lazy {
@@ -20,17 +20,17 @@ class LoginPresenterImpl(val context: Context):LoginContract.LoginPresenter {
 
     override fun loadLogin(email: String, password: String) {
         loginModel.login(email, password, {
-            if (it.code == 200) {
+            if (it.code in 200..300) {
                 loginView.loginSuccess(it.data)
                 SharedPreference.getInstance(context).saveUserId(it.data.id)
                 SharedPreference.getInstance(context).saveToken(it.data.token)
-              SharedPreference.getInstance(context).setIsLogin("login",true)
+                SharedPreference.getInstance(context).setIsLogin("login", true)
 
-            }else {
+            } else {
                 loginView.loginFail("Login Fail")
             }
         }, {
-            loginView.loginFail("Login Fail")
+            loginView.loginFail("Login Fail!!!")
         })
     }
 

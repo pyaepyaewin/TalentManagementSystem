@@ -1,7 +1,8 @@
-package com.example.talentmanagementsystem.ui.activities
+package com.example.talentmanagementsystem.ui.activities.Assignment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.talentmanagementsystem.R
 import com.example.talentmanagementsystem.database.AssignmentDataClass
@@ -20,6 +21,7 @@ class AssignmentActivity : AppCompatActivity(),AssignmentContract.AssignmentView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_assignment)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         arrow.setOnClickListener {
             onBackPressed()
             true

@@ -2,44 +2,51 @@ package com.example.talentmanagementsystem.ui.activities
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import com.example.talentmanagementsystem.R
+import com.example.talentmanagementsystem.data.models.SharedPreference
 import com.example.talentmanagementsystem.mvp.contract.MainContract
 import com.example.talentmanagementsystem.mvp.presenter.MainPresenterImpl
+import com.example.talentmanagementsystem.network_response.Login.Data
 import com.example.talentmanagementsystem.ui.activities.Activity.ActivitiesActivity
+import com.example.talentmanagementsystem.ui.activities.Assignment.AssignmentActivity
 import com.example.talentmanagementsystem.ui.activities.Teacher.TeacherActivity
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainContract.MainView {
+
     override fun goToFeedbackPage() {
-        intent = Intent(this, FeedbackActivity::class.java)
-        startActivity(intent)
+        val feedbackIntent = Intent(this, FeedbackActivity::class.java)
+        startActivity(feedbackIntent)
     }
 
     override fun goToTeacherPage() {
-        intent = Intent(this, TeacherActivity::class.java)
-        startActivity(intent)
+        val teacherIntent = Intent(this, TeacherActivity::class.java)
+        startActivity(teacherIntent)
     }
 
     override fun goToInfoPage() {
-        intent=Intent(this,InfoActivity::class.java)
-        startActivity(intent)
+        val infoIntent = Intent(this, InfoActivity::class.java)
+        startActivity(infoIntent)
     }
 
     override fun goToSchedulePage() {
-        intent = Intent(this, ScheduleActivity::class.java)
-        startActivity(intent)
+        val scheduleIntent = Intent(this, ScheduleActivity::class.java)
+        startActivity(scheduleIntent)
     }
 
     override fun goToAssignmentPage() {
-        intent = Intent(this, AssignmentActivity::class.java)
-        startActivity(intent)
+        val assignmentIntent = Intent(this, AssignmentActivity::class.java)
+        startActivity(assignmentIntent)
     }
 
     override fun goToActivityPage() {
-        intent = Intent(this, ActivitiesActivity::class.java)
-        startActivity(intent)
+        val activityIntent = Intent(this, ActivitiesActivity::class.java)
+        startActivity(activityIntent)
     }
 
     private val mainPresenter: MainContract.MainPresenter by lazy {
@@ -47,11 +54,14 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
     }
 
     override fun goToProfilePage() {
-        intent = Intent(this, ProfileActivity::class.java)
-        startActivity(intent)
+
+        val profileIntent = ProfileActivity.newIntent(this)
+        startActivity(profileIntent)
     }
 
     companion object {
+        var user: Data? = null
+
         fun newIntent(context: Context): Intent {
             val intent = Intent(context, MainActivity::class.java)
             return intent
@@ -61,10 +71,15 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         mainPresenter.attachView(this)
+        userName.text=SharedPreference.getInstance(this).getUserName()
+        //Picasso.get().load(SharedPreference.getInstance(this).getPhoto()).into(cardProfile)
 
         cardProfile.setOnClickListener {
+
             goToProfilePage()
+
         }
         activity.setOnClickListener {
             goToActivityPage()

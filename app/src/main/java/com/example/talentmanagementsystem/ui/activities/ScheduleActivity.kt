@@ -2,6 +2,7 @@ package com.example.talentmanagementsystem.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.talentmanagementsystem.R
 import com.example.talentmanagementsystem.database.ScheduleDataClass
@@ -25,6 +26,7 @@ mAdapter.setData(displayerList)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_schedule)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         arrow.setOnClickListener {
             onBackPressed()
             true
