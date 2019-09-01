@@ -2,6 +2,7 @@ package com.example.talentmanagementsystem.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
 import com.example.talentmanagementsystem.R
@@ -35,7 +36,11 @@ class ChangePasswordActivity : AppCompatActivity(), ChangePasswordContract.Chang
             var oldPasw = oldPasw.text.toString()
             var newPasw = newPasw.text.toString()
             var confirmPasw = confirmPasw.text.toString()
+            Log.d("oldpassword",oldPasw)
+
             changePasswordPresenter.sendPassword(student_id, oldPasw, newPasw, confirmPasw)
+
+
         }
         arrow.setOnClickListener {
             onBackPressed()

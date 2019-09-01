@@ -13,7 +13,7 @@ class ActivitiesPresenterImpl(val context: Context):ActivitiesContract.Activitie
 
 
     private val activityModel: ActivityModel by lazy {
-        ActivityModel().getInstance()
+        ActivityModel.getInstance()
     }
 
     override fun attachView(view: ActivitiesContract.ActivitiesView) {
@@ -28,6 +28,7 @@ class ActivitiesPresenterImpl(val context: Context):ActivitiesContract.Activitie
             },
             {
                 mView.showError(it.localizedMessage)
+                //mView.showError("Fail")
             },
             "Bearer $token")
     }

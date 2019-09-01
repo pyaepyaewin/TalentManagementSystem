@@ -25,9 +25,9 @@
         </activity>
         <activity android:name=".ui.activities.Teacher.TeacherActivity">
         </activity>
-        <activity android:name=".ui.activities.CreateFeedbackActivity">
+        <activity android:name=".ui.activities.Feedback.CreateFeedbackActivity">
         </activity>
-        <activity android:name=".ui.activities.FeedbackActivity">
+        <activity android:name=".ui.activities.Feedback.FeedbackActivity">
         </activity>
         <activity android:name=".ui.activities.ScheduleActivity">
         </activity>

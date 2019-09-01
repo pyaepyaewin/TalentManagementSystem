@@ -40,10 +40,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:hint="Email"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:fontFamily="@font/apercu_light"
             android:paddingLeft="15dp"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:background="@drawable/edittextround"/>
     <EditText
             android:id="@+id/edtPassword"
@@ -52,10 +53,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:hint="Password"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:fontFamily="@font/apercu_light"
             android:paddingLeft="15dp"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:background="@drawable/edittextround"/>
     <Button
             android:id="@+id/btnLogin"

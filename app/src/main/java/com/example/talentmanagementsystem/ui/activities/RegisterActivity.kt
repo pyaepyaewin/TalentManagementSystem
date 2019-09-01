@@ -10,13 +10,8 @@ import android.widget.*
 import com.example.talentmanagementsystem.R
 import com.example.talentmanagementsystem.mvp.contract.RegisterContract
 import com.example.talentmanagementsystem.mvp.presenter.RegisterPresenterImpl
-import com.example.talentmanagementsystem.network_response.Register.Data
 import com.example.talentmanagementsystem.ui.adapter.adapters.SpinnerAdapter1
 import kotlinx.android.synthetic.main.activity_register.*
-import java.sql.Date
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.*
 import kotlin.collections.ArrayList
 
 
@@ -81,7 +76,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.RegisterView {
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 key = p2
-                Toast.makeText(this@RegisterActivity, trackList[p2], Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@RegisterActivity, trackList[p2], Toast.LENGTH_SHORT).show()
 
             }
 

@@ -2,11 +2,18 @@ package com.example.talentmanagementsystem.ui.adapter.viewholder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.example.talentmanagementsystem.network_response.FeedBack.GetFeedBack.Data
 import kotlinx.android.synthetic.main.feedback.view.*
 
-class FeedbackViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
-    var issueName=itemView.feedbackTitle
-    var commenter=itemView.commenter
-    var issue=itemView.issue
-    var date=itemView.date
+class FeedbackViewHolder( private val view: View)
+: RecyclerView.ViewHolder(view) {
+    fun setData(data: Data) {
+        view.apply {
+            feedbackTitle.text = data.title
+            issue.text = data.description
+          //date need
+
+
+        }
+    }
 }

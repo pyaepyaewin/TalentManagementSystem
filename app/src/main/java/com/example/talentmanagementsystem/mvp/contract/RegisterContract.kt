@@ -1,8 +1,5 @@
 package com.example.talentmanagementsystem.mvp.contract
 
-import com.example.talentmanagementsystem.network_response.Register.Data
-import java.sql.Date
-
 interface RegisterContract {
     interface RegisterView
     {

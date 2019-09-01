@@ -49,21 +49,21 @@
                   android:textColor="@color/clearNotiColor"
                   android:layout_marginTop="55dp"
                   android:layout_marginStart="180dp"/>
-        <androidx.cardview.widget.CardView
-                android:id="@+id/love"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                app:cardCornerRadius="20dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginStart="360dp"
-                app:cardBackgroundColor="@color/clearNotiColor"
-        >
-            <ImageView android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:src="@drawable/love"
-                       android:scaleType="center"/>
+        <!--<androidx.cardview.widget.CardView-->
+                <!--android:id="@+id/love"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--app:cardCornerRadius="20dp"-->
+                <!--android:layout_marginTop="35dp"-->
+                <!--android:layout_marginStart="360dp"-->
+                <!--app:cardBackgroundColor="@color/clearNotiColor"-->
+        <!--&gt;-->
+            <!--<ImageView android:layout_width="match_parent"-->
+                       <!--android:layout_height="match_parent"-->
+                       <!--android:src="@drawable/love"-->
+                       <!--android:scaleType="center"/>-->
 
-        </androidx.cardview.widget.CardView>
+        <!--</androidx.cardview.widget.CardView>-->
 
     </RelativeLayout>
     <androidx.cardview.widget.CardView

@@ -9,18 +9,24 @@ import rx.Scheduler
 
 
 class ActivityModel :BaseModel(){
-    private var INSTANCE:ActivityModel?=null
-    var disposable = CompositeDisposable()
-
-
-    fun getInstance():ActivityModel
-    {
-        if(INSTANCE==null)
-        {
-            INSTANCE= ActivityModel()
-        }
-        return INSTANCE!!
+    val disposable: CompositeDisposable by lazy {
+        CompositeDisposable()
     }
+    companion object{
+        private var INSTANCE:ActivityModel?=null
+
+
+
+        fun getInstance():ActivityModel
+        {
+            if(INSTANCE==null)
+            {
+                INSTANCE= ActivityModel()
+            }
+            return INSTANCE!!
+        }
+    }
+
     fun loadActivityData(onSuccess:(response:ActivityResponse)->Unit,onError:(error:Throwable)->Unit, token:String)
     {
         disposable.add(mApiService.loadActivities(token)

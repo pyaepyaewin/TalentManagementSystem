@@ -1,6 +1,7 @@
 package com.example.talentmanagementsystem.data.models
 
-import com.example.talentmanagementsystem.network_response.ChangePasw.ChangePaswResponse
+import android.util.Log
+import com.example.talentmanagementsystem.network_response.ChangePasw.ChangePasswordResponse
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -25,7 +26,7 @@ class ChangePasswordModel :BaseModel(){
         old_password:String,
         new_password:String,
         confirm_password:String,
-        onSuccess: (response: ChangePaswResponse) -> Unit,
+        onSuccess: (response: ChangePasswordResponse) -> Unit,
         onError: (error: Throwable) -> Unit
     ) {
         disposable.add(
@@ -34,8 +35,10 @@ class ChangePasswordModel :BaseModel(){
                 .subscribe({
                     onSuccess(it)
 
+                    Log.d("Success!!!!!!!!!","567890")
                 }, {
                     onError(it)
+                    Log.d("Error#####", it.localizedMessage)
                 })
         )
     }

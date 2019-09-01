@@ -1,7 +1,7 @@
-package com.example.talentmanagementsystem.network_response.Assignment
+package com.example.talentmanagementsystem.network_response.AssignmentResponse
 
 data class AssignmentResponse(
-    val data: List<Any>,
+    val data: Data,
     val code: Int,
     val duration: Double,
     val errors: Errors,

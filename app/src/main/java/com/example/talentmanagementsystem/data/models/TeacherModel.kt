@@ -20,13 +20,13 @@ class TeacherModel:BaseModel() {
             return instance!!
         }
     }
-    fun loadTeacherData(
+    fun loadTeacherData(token:String,
         id:Int,
         onSuccess: (response: TeacherResponse) -> Unit,
-        onError: (error: Throwable) -> Unit,token:String
+        onError: (error: Throwable) -> Unit
     ) {
         disposable.add(
-            mApiService.loadTeacherData(id).subscribeOn(Schedulers.io())
+            mApiService.loadTeacherData(token,id).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     onSuccess(it)

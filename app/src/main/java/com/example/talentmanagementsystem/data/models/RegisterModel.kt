@@ -4,7 +4,6 @@ import com.example.talentmanagementsystem.network_response.Register.RegisterResp
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import java.sql.Date
 
 class RegisterModel:BaseModel() {
     val disposable: CompositeDisposable by lazy {

@@ -24,6 +24,8 @@
     <color name="bold">#010205</color>
     <color name="backColor">#C4C4C4</color>
     <color name="darkBlue">#42254D</color>
+    <color name="finishBg">#DCFDDF</color>
+    <color name="unfinishBg">#FEFFC5</color>
 
 
 </resources>

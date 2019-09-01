@@ -2,7 +2,6 @@ package com.example.talentmanagementsystem.ui.activities
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
@@ -13,8 +12,8 @@ import com.example.talentmanagementsystem.mvp.presenter.MainPresenterImpl
 import com.example.talentmanagementsystem.network_response.Login.Data
 import com.example.talentmanagementsystem.ui.activities.Activity.ActivitiesActivity
 import com.example.talentmanagementsystem.ui.activities.Assignment.AssignmentActivity
+import com.example.talentmanagementsystem.ui.activities.Feedback.FeedbackActivity
 import com.example.talentmanagementsystem.ui.activities.Teacher.TeacherActivity
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainContract.MainView {
@@ -84,7 +83,7 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
         activity.setOnClickListener {
             goToActivityPage()
         }
-        assignment.setOnClickListener {
+       assignment.setOnClickListener {
             goToAssignmentPage()
         }
         schedule.setOnClickListener {
@@ -96,7 +95,7 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
         teacher.setOnClickListener {
             goToTeacherPage()
         }
-        aboutUs.setOnClickListener {
+       info.setOnClickListener {
             goToInfoPage()
         }
     }

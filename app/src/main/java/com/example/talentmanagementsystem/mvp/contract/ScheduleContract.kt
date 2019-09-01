@@ -1,10 +1,11 @@
 package com.example.talentmanagementsystem.mvp.contract
 
+import com.example.talentmanagementsystem.database.ScheduleDataClass
 import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ItemDisplayer
 
 interface ScheduleContract {
     interface ScheduleView{
-        fun showScheduleList(displayerList:MutableList<ItemDisplayer>)
+        fun showScheduleList(scheduleList:List<ScheduleDataClass>)
     }
 
     interface SchedulePresenter{

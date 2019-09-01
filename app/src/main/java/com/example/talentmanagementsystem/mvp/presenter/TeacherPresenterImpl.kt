@@ -16,18 +16,18 @@ class TeacherPresenterImpl(val context: Context) : TeacherContract.TeacherPresen
         TeacherModel.getInstance()
     }
 
-    override fun loadTeacherData(id: Int) {
+    override fun loadTeacherData() {
         val token = SharedPreference.getInstance(context).getToken()
-        teacherModel.loadTeacherData(id, {
-            teacherView.showTeacherList(it.data)
-
-        },
+        val id=SharedPreference.getInstance(context).getUserId()
+        teacherModel.loadTeacherData("Bearer $token",id,
+            {
+                teacherView.showTeacherList(it.data)
+            },
             {
                 teacherView.error(it.localizedMessage)
-            },
-                "Bearer $token"
+            }
             )
     }
 
-
 }
+

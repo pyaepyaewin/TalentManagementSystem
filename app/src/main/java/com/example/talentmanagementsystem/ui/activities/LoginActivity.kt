@@ -65,15 +65,17 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
         var address = user.address
         var phone = user.phone
         var date = user.date_of_birth
-        var module = user.module
+        var password=edtPassword.text.toString()
+       // var module = user.module
         var photo = user.photo
         preference.saveUserName(userName)
         preference.saveEmail(email)
         preference.saveAddress(address)
         preference.savePhone(phone)
         preference.saveDate(date)
-        preference.saveModule(module)
+       // preference.saveModule(module)
         preference.savePhoto(photo)
+        preference.savePassword(password)
 
         val intent = MainActivity.newIntent(this)
         startActivity(intent)

@@ -45,6 +45,16 @@ android:orientation="vertical">
         />
     </androidx.cardview.widget.CardView>
     </LinearLayout>
+    <TextView
+            android:id="@+id/article"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:fontFamily="@font/apercu_bold"
+            android:textSize="20sp"
+            android:textColor="@color/notiColor"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSchedule"
             android:layout_width="395dp"
@@ -52,5 +62,6 @@ android:orientation="vertical">
             tools:layout_editor_absoluteY="8dp"
             tools:layout_editor_absoluteX="8dp"
             android:layout_marginTop="20dp"
+            android:layout_gravity="center"
     />
 </androidx.appcompat.widget.LinearLayoutCompat>

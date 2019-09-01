@@ -31,19 +31,27 @@ android:orientation="vertical">
                   android:textSize="30sp"
                   android:layout_marginStart="30dp"
                   android:layout_marginTop="35dp"/>
-        <androidx.cardview.widget.CardView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                app:cardCornerRadius="55dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="80dp"
-        >
-            <ImageView android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:src="@drawable/teacher"
-                       android:scaleType="centerInside"
-            />
-        </androidx.cardview.widget.CardView>
+        <!--<androidx.cardview.widget.CardView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--app:cardCornerRadius="55dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginStart="80dp"-->
+        <!--&gt;-->
+            <!--<ImageView android:layout_width="match_parent"-->
+                       <!--android:layout_height="match_parent"-->
+                       <!--android:src="@drawable/teacher"-->
+                       <!--android:scaleType="centerInside"-->
+            <!--/>-->
+        <!--</androidx.cardview.widget.CardView>-->
+        <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
+                                                      android:layout_height="70dp"
+                                                      android:layout_marginTop="20dp"
+                                                      android:layout_marginStart="100dp"
+                                                      android:src="@drawable/teacher"
+                                                      app:civ_border_width="2dp"
+                                                      app:civ_border_color="@color/white"
+        />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTeacher"

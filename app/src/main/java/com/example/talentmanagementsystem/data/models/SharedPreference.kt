@@ -18,6 +18,7 @@ class SharedPreference(context: Context) {
         const val MODULE = "module"
         const val DOB = "dob"
         const val PHOTO = "photo"
+        const val PASSWORD="password"
         private var instance: SharedPreference? = null
 
         fun getInstance(context: Context): SharedPreference {
@@ -120,5 +121,13 @@ class SharedPreference(context: Context) {
 
     fun getToken(): String {
         return sharedPreference.getString(TOKEN, "").toString()
+    }
+    fun savePassword(password:String)
+    {
+        sharedPreference.edit().putString(PASSWORD, password).apply()
+    }
+    fun getPassword():String
+    {
+        return sharedPreference.getString(PASSWORD,"").toString()
     }
 }

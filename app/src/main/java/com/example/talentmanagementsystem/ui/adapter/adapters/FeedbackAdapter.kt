@@ -4,30 +4,29 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.talentmanagementsystem.R
 import com.example.talentmanagementsystem.database.FeedbackDataClass
+import com.example.talentmanagementsystem.network_response.FeedBack.GetFeedBack.Data
 import com.example.talentmanagementsystem.ui.adapter.viewholder.FeedbackViewHolder
 
-class FeedbackAdapter(var context: Context, var layout:Int, var list: List<FeedbackDataClass>):
-    RecyclerView.Adapter<FeedbackViewHolder>() {
+class FeedbackAdapter() : RecyclerView.Adapter<FeedbackViewHolder>() {
+    private var feedbackList = emptyList<Data>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedbackViewHolder {
-        var inflater = LayoutInflater.from(context)
-        var view = inflater.inflate(layout, parent, false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.feedback,parent,false)
         return FeedbackViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return list.count()
+        return feedbackList.size
     }
 
     override fun onBindViewHolder(holder: FeedbackViewHolder, position: Int) {
-        holder.issueName.text = list[position].issueName
-        holder.commenter.text = list[position].commenter
-        holder.issue.text = list[position].issue
-        holder.date.text = list[position].date
 
-//        holder.itemView.setOnClickListener {
-//            context.startActivity(ActivitiesDetailActivity.newIntent(context,list[position].chairmanName,
-//                list[position].backgroundImage,list[position].bodyText))
-//    }
+        holder.setData(feedbackList[position])
+    }
+
+    fun setNewList(feedbackData: List<Data>) {
+        this.feedbackList = feedbackData
+        notifyDataSetChanged()
     }
 }

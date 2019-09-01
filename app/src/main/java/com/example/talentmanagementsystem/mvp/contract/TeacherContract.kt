@@ -11,6 +11,6 @@ interface TeacherContract {
     interface TeacherPresenter
     {
         fun attachView(view: TeacherView)
-        fun loadTeacherData(id:Int)
+        fun loadTeacherData()
     }
 }

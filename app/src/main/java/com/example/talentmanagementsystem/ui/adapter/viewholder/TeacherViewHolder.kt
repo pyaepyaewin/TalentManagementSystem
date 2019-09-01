@@ -13,7 +13,7 @@ class TeacherViewHolder( private val view: View,
         view.apply {
             teacherName.text = data.name
             position.text=data.position
-            //Picasso.get().load(data.photo).into(view.image)
+           // Picasso.get().load(data.photo).into(view.image)
             setOnClickListener {
                 onClick(data)
 

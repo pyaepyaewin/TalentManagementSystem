@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activities.CreateFeedbackActivity"
+        tools:context=".ui.activities.Feedback.CreateFeedbackActivity"
 android:orientation="vertical">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -47,16 +47,17 @@ android:orientation="vertical">
 
     </LinearLayout>
     <EditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/edtTitle"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="55dp"
-            android:hint="Email"
+            android:hint="Title"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:fontFamily="@font/apercu_light"
             android:paddingLeft="15dp"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:background="@drawable/edittextround"
     android:backgroundTint="@color/darkBlue"/>
     <EditText
@@ -67,10 +68,11 @@ android:orientation="vertical">
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:hint="Description "
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:fontFamily="@font/apercu_light"
             android:paddingLeft="15dp"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:background="@drawable/edittextround"
     android:backgroundTint="@color/darkBlue"/>
     <Button

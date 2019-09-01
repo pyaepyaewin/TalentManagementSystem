@@ -1,34 +1,38 @@
 package com.example.talentmanagementsystem.data.models
 
-import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.CurrentAssignmentDisplayer
-import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.FinishAssignmentDisplayer
-import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ItemDisplayer
-import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.TitleDisplayer
+import android.util.Log
+import android.widget.Toast
 
-class AssignmentModel: BaseModel() {
+import com.example.talentmanagementsystem.network_response.AssignmentResponse.AssignmentResponse
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 
-    fun loadAssignmentList(success:(data:MutableList<ItemDisplayer>)->Unit, error:(String)->Unit){
-        var mItemList = mutableListOf<ItemDisplayer>()
-
-        mItemList.add(TitleDisplayer("Current"))
-        //val currentDataList = response.current
-        //foreach(currentDataLIst){
-        // mItemList.add(CurrentAssignmentDisplayer())
-        //}
-        mItemList.add(CurrentAssignmentDisplayer())
-        mItemList.add(CurrentAssignmentDisplayer())
-        mItemList.add(CurrentAssignmentDisplayer())
-
-        mItemList.add(TitleDisplayer("Finished"))        //val finishDataList = response.finsh
-
-        //val FinishDataList = response.Finish
-        //foreach(FinishDataList){
-        // mItemList.add(FinishAssignmentDisplayer())
-        //}
-        mItemList.add(FinishAssignmentDisplayer())
-        mItemList.add(FinishAssignmentDisplayer())
-
-
-        success(mItemList)
+class AssignmentModel : BaseModel() {
+private var INSTANCE:AssignmentModel?=null
+    var disposable=CompositeDisposable()
+    fun getInstance():AssignmentModel
+    {
+        if(INSTANCE==null)
+        {
+            INSTANCE= AssignmentModel()
+        }
+        return INSTANCE!!
     }
+
+    fun loadAssignmentList(onSuccess: (response: AssignmentResponse)->Unit,
+                           onError:(error:Throwable)->Unit, token:String, id:Int) {
+        disposable.add(mApiService.loadAssignmentData(token, id).subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(
+                {
+                    onSuccess(it)
+                },
+                {
+                    // onError()
+                    //Log.d("Error displayer", it.localizedMessage)
+                }
+            ))
+    }
+
 }

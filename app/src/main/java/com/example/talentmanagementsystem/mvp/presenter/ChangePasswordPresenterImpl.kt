@@ -15,12 +15,8 @@ class ChangePasswordPresenterImpl : ChangePasswordContract.ChangePasswordPresent
 
     override fun sendPassword(student_id: Int, old_password: String, new_password: String, confirm_password: String) {
         changePasswordModel.changePassword(student_id, old_password, new_password, confirm_password, {
-            if (it.code in 200..300) {
-                changePasswordView.ChangePasswordSuccess("Changed Password Successfully")
+            changePasswordView.ChangePasswordSuccess("Changed Password Successfully")
 
-            } else {
-                changePasswordView.FailChanges("Changed Password Failed!!")
-            }
         }, {
             changePasswordView.FailChanges("Changed Password Error!!!")
         })

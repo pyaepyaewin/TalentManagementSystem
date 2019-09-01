@@ -46,10 +46,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:hint="name"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:fontFamily="@font/apercu_light"
             android:paddingLeft="15dp"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtEmail1"
@@ -58,10 +59,11 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:hint="email"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:fontFamily="@font/apercu_light"
                 android:paddingLeft="15dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtPassword1"
@@ -70,10 +72,11 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:hint="password"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:fontFamily="@font/apercu_light"
                 android:paddingLeft="15dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtConfirmPassword"
@@ -83,9 +86,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:hint="confirm password"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:paddingLeft="15dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtPhone"
@@ -94,10 +98,11 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:hint="phone"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:fontFamily="@font/apercu_light"
                 android:paddingLeft="15dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:background="@drawable/edittextround"/>
         <Spinner
                 android:id="@+id/spinner"
@@ -116,9 +121,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:hint="date of birth"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:paddingLeft="15dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtAddress"
@@ -126,11 +132,12 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:textColor="@color/white"
                 android:hint="address"
                 android:textColorHint="@color/white"
                 android:paddingLeft="15dp"
                 android:paddingBottom="50dp"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:fontFamily="@font/apercu_light"
                 android:background="@drawable/edittextround"/>
         <Button

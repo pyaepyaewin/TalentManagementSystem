@@ -1,4 +1,4 @@
-package com.example.talentmanagementsystem.network_response.Assignment
+package com.example.talentmanagementsystem.network_response.AssignmentResponse
 
 data class Meta(
     val endpoint: String,

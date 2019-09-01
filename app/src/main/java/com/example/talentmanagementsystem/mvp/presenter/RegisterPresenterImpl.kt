@@ -34,7 +34,7 @@ class RegisterPresenterImpl:RegisterContract.RegisterPresenter {
             },
 
         {
-
+registerView.registerFail(it.localizedMessage)
         })
     }
 

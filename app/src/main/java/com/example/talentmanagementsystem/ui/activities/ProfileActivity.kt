@@ -4,8 +4,10 @@ package com.example.talentmanagementsystem.ui.activities
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.view.WindowManager
 import com.example.talentmanagementsystem.R
@@ -18,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity(),ProfileContract.ProfileView {
     companion object {
+        val REQUEST_IMAGE_CAPTURE = 1
         fun newIntent(context: Context): Intent {
             val intent = Intent(context, ProfileActivity::class.java)
             return intent
@@ -62,8 +65,37 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.ProfileView {
             goToChangePasswordPage()
         }
 
+edit.setOnClickListener {
 
+        val intent = Intent(Intent.ACTION_GET_CONTENT)
+
+        intent.type = "image/*"
+
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
+        }
+
+    //val locationForPhotos: Uri
+//
+//    fun capturePhoto(targetFilename: String) {
+//        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
+//            putExtra(MediaStore.EXTRA_OUTPUT, Uri.withAppendedPath(locationForPhotos, targetFilename))
+//        }
+//        if (intent.resolveActivity(packageManager) != null) {
+//            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
+//        }
+//    }
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+//        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
+//            val thumbnail: Bitmap = data.getParcelableExtra("data")
+//            // Do other work with full size photo saved in locationForPhotos
+//            ...
+//        }
+//    }
+
+
+}
+}
 
 
     }
-}

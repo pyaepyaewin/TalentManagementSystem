@@ -51,7 +51,7 @@ class TeacherActivity : AppCompatActivity(), TeacherContract.TeacherView {
             layoutManager = LinearLayoutManager(applicationContext)
             adapter = mAdapter
         }
-            mPresenter.loadTeacherData(SharedPreference.getInstance(this).getUserId())
+            mPresenter.loadTeacherData()
 
 
     }

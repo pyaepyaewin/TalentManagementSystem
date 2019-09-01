@@ -3,19 +3,23 @@ package com.example.talentmanagementsystem.ui.adapter.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.talentmanagementsystem.network_response.AssignmentResponse.Complete
+import com.example.talentmanagementsystem.network_response.AssignmentResponse.Data
+import com.example.talentmanagementsystem.network_response.AssignmentResponse.StudentAssignment
 import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ItemDisplayer
 import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ViewType
 import com.example.talentmanagementsystem.ui.adapter.viewholder.AssignmentViewHolder
 
-class DelegateAdapter: RecyclerView.Adapter<AssignmentViewHolder>()
+class DelegateAdapter(private val onClick:(notice: Complete)->Unit): RecyclerView.Adapter<AssignmentViewHolder>()
 {
     override fun getItemViewType(position: Int): Int = items[position].getViewType().ordinal
-
+//private var assignmentDataList= emptyList<Complete>()
     var items = mutableListOf<ItemDisplayer>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AssignmentViewHolder =
         AssignmentViewHolder(LayoutInflater.from(parent.context).inflate(
             ViewType.values()[viewType].layoutId,
-            parent, false))
+            parent, false),onClick)
 
     override fun getItemCount(): Int =items.size
 
@@ -25,5 +29,6 @@ class DelegateAdapter: RecyclerView.Adapter<AssignmentViewHolder>()
         notifyDataSetChanged()
 
     }
+
 
 }

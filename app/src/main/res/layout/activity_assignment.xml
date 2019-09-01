@@ -19,7 +19,7 @@
                 app:cardBackgroundColor="@color/backColor">
             <ImageView
                     android:id="@+id/arrow"
-                    android:layout_width="match_parent"
+                    android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/arrow"
                     android:scaleType="center"/>
@@ -31,26 +31,33 @@
                   android:textSize="30sp"
                   android:layout_marginStart="30dp"
                   android:layout_marginTop="35dp"/>
-        <androidx.cardview.widget.CardView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                app:cardCornerRadius="50dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="60dp"
-        >
-            <ImageView android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:src="@drawable/test"
-                       android:scaleType="centerCrop"
-            />
-        </androidx.cardview.widget.CardView>
+        <!--<androidx.cardview.widget.CardView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--app:cardCornerRadius="50dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginStart="60dp"-->
+        <!--&gt;-->
+            <!--<ImageView android:layout_width="match_parent"-->
+                       <!--android:layout_height="match_parent"-->
+                       <!--android:src="@drawable/test"-->
+                       <!--android:scaleType="centerCrop"-->
+            <!--/>-->
+        <!--</androidx.cardview.widget.CardView>-->
+        <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
+                                                      android:layout_height="70dp"
+        android:src="@drawable/test"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"
+        />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAssignment"
             android:layout_width="395dp"
             android:layout_height="715dp"
-            tools:layout_editor_absoluteY="8dp"
-            tools:layout_editor_absoluteX="8dp"
+
     />
 </androidx.appcompat.widget.LinearLayoutCompat>

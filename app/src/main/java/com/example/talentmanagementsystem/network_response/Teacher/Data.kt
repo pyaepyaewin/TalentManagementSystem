@@ -1,5 +1,7 @@
 package com.example.talentmanagementsystem.network_response.Teacher
 
+import java.io.Serializable
+
 data class Data(
     val address: String,
     val course: Course,
@@ -14,5 +16,4 @@ data class Data(
     val photo: Any,
     val position: String,
     val updated_at: Any,
-    val verified: Int
-)
+    val verified: Int)

@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activities.FeedbackActivity"
+        tools:context=".ui.activities.Feedback.FeedbackActivity"
 android:orientation="vertical">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -69,24 +69,37 @@ android:orientation="vertical">
             tools:layout_editor_absoluteY="8dp"
             tools:layout_editor_absoluteX="8dp"
     android:layout_marginTop="150dp"/>
-<androidx.cardview.widget.CardView android:layout_width="50dp"
-                                   android:layout_height="50dp"
-                                   android:layout_marginTop="580dp"
-                                   android:layout_marginStart="320dp"
-                                   app:cardCornerRadius="20dp">
+<!--<androidx.cardview.widget.CardView android:layout_width="50dp"-->
+                                   <!--android:layout_height="50dp"-->
+                                   <!--android:layout_marginTop="580dp"-->
+                                   <!--android:layout_marginStart="320dp"-->
+                                   <!--app:cardCornerRadius="20dp">-->
 
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+            <!--android:src="@drawable/add"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:clickable="true"-->
+            <!--android:id="@+id/floatingActionButton"-->
+            <!--android:backgroundTint="@color/notiColor"-->
+            <!--android:scaleType="centerInside"/>-->
+<!--</androidx.cardview.widget.CardView>-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:src="@drawable/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:id="@+id/floatingActionButton"
-            android:backgroundTint="@color/notiColor"
-            android:scaleType="centerInside"/>
-</androidx.cardview.widget.CardView>
+        android:src="@drawable/add"
+    android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:id="@+id/floatingActionButton"
+        android:backgroundTint="@color/notiColor"
+        android:scaleType="fitXY"
+    android:layout_marginTop="580dp"
+    android:layout_marginStart="320dp"
+    />
 
 
 
 
 
-</RelativeLayout>
+
+
+        </RelativeLayout>
