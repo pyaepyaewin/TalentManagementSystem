@@ -1,11 +1,12 @@
 package com.example.talentmanagementsystem.data.models
 
+import android.util.Log
 import com.example.talentmanagementsystem.network_response.Register.RegisterResponse
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class RegisterModel:BaseModel() {
+class RegisterModel : BaseModel() {
     val disposable: CompositeDisposable by lazy {
         CompositeDisposable()
     }
@@ -35,14 +36,15 @@ class RegisterModel:BaseModel() {
     ) {
         disposable.add(
             mApiService.register(
-                email,name,password,confirm_password,date_of_birth,module_id,phone,address
+                name, email, password, confirm_password, phone, date_of_birth, module_id, address
             ).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     onSuccess(it)
-
+                    Log.d("registersend", "SendOk")
                 }, {
                     onError(it)
+                    Log.d("failsend", it.localizedMessage)
 
                 })
         )

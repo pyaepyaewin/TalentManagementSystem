@@ -9,7 +9,7 @@
             app:cardCornerRadius="20dp"
     android:layout_gravity="center"
     android:layout_marginTop="15dp"
-    android:layout_marginStart="5dp">
+    >
         <LinearLayout android:layout_width="380dp"
                       android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jul 7"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/apercu_regular"
                     android:textSize="11sp"
                     android:layout_marginStart="200dp"
@@ -47,6 +47,9 @@
         android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
                 android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:textAlignment="gravity"
+                android:letterSpacing="0.05"
         />
 
     </androidx.cardview.widget.CardView>

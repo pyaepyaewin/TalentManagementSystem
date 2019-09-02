@@ -21,6 +21,7 @@ abstract class BaseModel {
             .connectTimeout(60, TimeUnit.SECONDS)
             .writeTimeout(60, TimeUnit.SECONDS)
             .readTimeout(60, TimeUnit.SECONDS)
+            .retryOnConnectionFailure(true)
             .build()
         val retrofit = Retrofit.Builder()
             .baseUrl(AppConstants.base_url)

@@ -22,6 +22,7 @@ class ChangePasswordModel :BaseModel(){
         }
     }
     fun changePassword(
+        token:String,
         student_id:Int,
         old_password:String,
         new_password:String,
@@ -30,7 +31,7 @@ class ChangePasswordModel :BaseModel(){
         onError: (error: Throwable) -> Unit
     ) {
         disposable.add(
-            mApiService.changePasw(student_id,old_password,new_password,confirm_password).subscribeOn(Schedulers.io())
+            mApiService.changePasw(token,student_id,old_password,new_password,confirm_password).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     onSuccess(it)

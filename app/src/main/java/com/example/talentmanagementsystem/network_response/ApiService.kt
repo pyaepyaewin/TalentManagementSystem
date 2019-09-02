@@ -27,12 +27,13 @@ interface ApiService {
     fun loadPinCode(@Field("pin") pinCode: Int): Observable<PinCodeResponse>
 
     @FormUrlEncoded
-    @PUT("students/change_password")
+    @POST("students/change_password/{student_id}")
     fun changePasw(
-        @Field("student_id") id: Int,
-        @Field("old_password") oldPasw: String,
-        @Field("new_password") newPasw: String,
-        @Field("confirm_password") confirmPasw: String
+        @Header("Authorization") token: String,
+        @Path("student_id")student_id: Int,
+        @Field("old_password") old_password: String,
+        @Field("new_password") new_password: String,
+        @Field("confirm_password") confirm_password: String
     ): Observable<ChangePasswordResponse>
 
 
@@ -41,13 +42,13 @@ interface ApiService {
     @FormUrlEncoded
     @POST("register")
     fun register(
-        @Field("email") email: String,
         @Field("name") name: String,
+        @Field("email") email: String,
         @Field("password") password: String,
         @Field("confirm_password") confirmPassword: String,
+        @Field("phone") phone: String,
         @Field("date_of_birth") date_of_birth: String,
         @Field("module_id") module_id: Int,
-        @Field("phone") phone: String,
         @Field("address") address: String
     ): Observable<RegisterResponse>
 

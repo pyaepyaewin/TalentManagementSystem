@@ -120,7 +120,7 @@
                 android:fontFamily="@font/apercu_light"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:hint="date of birth"
+                android:hint="date of birth (YYY/MM/DD)"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:paddingLeft="15dp"

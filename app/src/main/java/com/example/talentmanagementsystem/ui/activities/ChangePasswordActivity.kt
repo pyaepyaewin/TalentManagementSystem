@@ -13,18 +13,22 @@ import com.example.talentmanagementsystem.mvp.presenter.ChangePasswordPresenterI
 import kotlinx.android.synthetic.main.activity_change_password.*
 
 class ChangePasswordActivity : AppCompatActivity(), ChangePasswordContract.ChangePasswordView {
+
+
     private val changePasswordPresenter: ChangePasswordContract.ChangePasswordPresenter by lazy {
-        ChangePasswordPresenterImpl()
+        ChangePasswordPresenterImpl(this)
     }
 
     override fun ChangePasswordSuccess(success: String) {
         Toast.makeText(this, "Changed Success", Toast.LENGTH_SHORT).show()
+        val intent = ProfileActivity.newIntent(this)
+        startActivity(intent)
     }
 
-    override fun FailChanges(message: String) {
-        Toast.makeText(this, "Changed Fail", Toast.LENGTH_SHORT).show()
-
+    override fun ChangedFail(message: String) {
+        Toast.makeText(this, "Fail", Toast.LENGTH_SHORT).show()
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,13 +36,14 @@ class ChangePasswordActivity : AppCompatActivity(), ChangePasswordContract.Chang
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         changePasswordPresenter.attachView(this)
         btnSave.setOnClickListener {
-            var student_id = SharedPreference.getInstance(this).getUserId()
+
             var oldPasw = oldPasw.text.toString()
             var newPasw = newPasw.text.toString()
             var confirmPasw = confirmPasw.text.toString()
-            Log.d("oldpassword",oldPasw)
+            Log.d("oldpassword", oldPasw)
 
-            changePasswordPresenter.sendPassword(student_id, oldPasw, newPasw, confirmPasw)
+            changePasswordPresenter.sendPassword(oldPasw, newPasw, confirmPasw)
+
 
 
         }

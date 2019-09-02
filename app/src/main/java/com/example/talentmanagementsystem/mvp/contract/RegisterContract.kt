@@ -10,7 +10,7 @@ interface RegisterContract {
     interface RegisterPresenter
     {
         fun attachView(view: RegisterView)
-        fun loadRegisterData(name:String,
+        fun sendRegisterData(name:String,
                              email:String,
                              password:String,
                              confirm_password:String,

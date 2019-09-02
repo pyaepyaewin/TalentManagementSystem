@@ -38,6 +38,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.RegisterView {
 //        startActivity(intent)
 //    }
     override fun registerSuccess(message: String) {
+        Toast.makeText(this,"Wait Admin Verification",Toast.LENGTH_SHORT).show()
         intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
@@ -60,7 +61,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.RegisterView {
 
             var address = edtAddress.text.toString()
             var module_id = key
-            registerPresenter.loadRegisterData(name, email, password, confirmPassword, phone, dob, module_id, address)
+            registerPresenter.sendRegisterData(name, email, password, confirmPassword, phone, dob, module_id, address)
         }
 
         val trackList = mutableListOf<String>()

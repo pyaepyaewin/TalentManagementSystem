@@ -73,7 +73,7 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.ProfileView {
                 startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
             }
 //            var profile=edit.setImageURI(thumb).toString()
-//            SharedPreference.getInstance(this).saveProfile(profile)
+       //    SharedPreference.getInstance(this).saveProfile()
         }
 
 }

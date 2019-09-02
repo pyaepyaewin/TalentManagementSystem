@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteY="118dp"
             tools:layout_editor_absoluteX="8dp"
-            android:layout_marginStart="8dp"
+         android:layout_gravity="center"
             android:layout_marginTop="10dp"
 
     />
