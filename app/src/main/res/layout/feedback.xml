@@ -23,17 +23,22 @@
                     android:textColor="@color/bold"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"/>
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+                <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jul 7"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/apercu_regular"
+                        android:textSize="12sp"
+                        android:layout_marginStart="200dp"
+                        android:textColor="#A39696"/>
 
-            <TextView
-                    android:id="@+id/date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jul 7"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/apercu_regular"
-                    android:textSize="11sp"
-                    android:layout_marginStart="200dp"
-                    android:textColor="#A39696"/>
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -43,8 +48,8 @@
                   android:layout_height="wrap_content"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         android:fontFamily="@font/apercu_regular"
-        android:textSize="12sp"
-        android:layout_marginTop="50dp"
+        android:textSize="14sp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
                 android:paddingBottom="8dp"
                 android:paddingTop="8dp"

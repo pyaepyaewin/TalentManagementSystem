@@ -37,7 +37,7 @@
                   android:fontFamily="@font/apercu_regular"
                   android:textSize="18sp"
                   android:textColor="@color/clearNotiColor"
-                  android:layout_marginTop="55dp"
+                  android:layout_marginTop="60dp"
                   android:layout_marginStart="100dp"/>
         <TextView
                 android:id="@+id/speaker"
@@ -47,7 +47,7 @@
                   android:fontFamily="@font/apercu_regular"
                   android:textSize="18sp"
                   android:textColor="@color/notiColor"
-                  android:layout_marginTop="55dp"
+                  android:layout_marginTop="60dp"
                   android:layout_marginStart="180dp"/>
         <!--<androidx.cardview.widget.CardView-->
                 <!--android:id="@+id/love"-->
