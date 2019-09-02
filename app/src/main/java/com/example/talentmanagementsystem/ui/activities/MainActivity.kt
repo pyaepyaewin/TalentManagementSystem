@@ -14,6 +14,7 @@ import com.example.talentmanagementsystem.ui.activities.Activity.ActivitiesActiv
 import com.example.talentmanagementsystem.ui.activities.Assignment.AssignmentActivity
 import com.example.talentmanagementsystem.ui.activities.Feedback.FeedbackActivity
 import com.example.talentmanagementsystem.ui.activities.Teacher.TeacherActivity
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainContract.MainView {
@@ -73,7 +74,8 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         mainPresenter.attachView(this)
         userName.text=SharedPreference.getInstance(this).getUserName()
-        //Picasso.get().load(SharedPreference.getInstance(this).getPhoto()).into(cardProfile)
+
+       //     Picasso.get().load(profile_link).into(profile)
 
         cardProfile.setOnClickListener {
 

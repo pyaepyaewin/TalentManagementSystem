@@ -10,7 +10,7 @@ import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ItemDi
 import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ViewType
 import com.example.talentmanagementsystem.ui.adapter.viewholder.AssignmentViewHolder
 
-class DelegateAdapter(private val onClick:(notice: Complete)->Unit): RecyclerView.Adapter<AssignmentViewHolder>()
+class DelegateAdapter(): RecyclerView.Adapter<AssignmentViewHolder>()
 {
     override fun getItemViewType(position: Int): Int = items[position].getViewType().ordinal
 //private var assignmentDataList= emptyList<Complete>()
@@ -19,7 +19,7 @@ class DelegateAdapter(private val onClick:(notice: Complete)->Unit): RecyclerVie
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AssignmentViewHolder =
         AssignmentViewHolder(LayoutInflater.from(parent.context).inflate(
             ViewType.values()[viewType].layoutId,
-            parent, false),onClick)
+            parent, false))
 
     override fun getItemCount(): Int =items.size
 

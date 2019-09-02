@@ -9,8 +9,8 @@ data class Data(
     val deleted_at: Any,
     val description: String,
     val id: Int,
-    val image: String,
-    val speaker: String,
-    val title: String,
+    val image: String?=null,
+    val speaker: String?=null,
+    val title: String?=null,
     val updated_at: Any
 ) : Serializable

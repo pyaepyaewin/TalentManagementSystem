@@ -15,14 +15,19 @@ import kotlinx.android.synthetic.main.activity_assignment_detail.*
 import kotlinx.android.synthetic.main.activity_assignment_detail.arrow
 
 class AssignmentDetailActivity : AppCompatActivity() {
+    var topic: String? = null
+    var mark: Int =0
 
-    companion object{
-        const val EXTRA="assignment"
-        var data:Complete?=null
-        fun newIntent(context: Context,data:Complete): Intent{
-            val intent = Intent(context,AssignmentDetailActivity::class.java)
-            intent.putExtra("Complete",data)
-            return  intent
+    companion object {
+        const val EXTRA = "assignment"
+        const val EXTRA_TOPIC = "topic"
+        const val EXTRA_MARK = "mark"
+
+        fun newIntent(context: Context, topic: String, mark: Int): Intent {
+            val intent = Intent(context, AssignmentDetailActivity::class.java)
+            intent.putExtra(EXTRA_TOPIC, topic)
+            intent.putExtra(EXTRA_MARK, mark)
+            return intent
         }
 
     }
@@ -33,20 +38,18 @@ class AssignmentDetailActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         //Log.d("hello",(intent.extras!!.getSerializable(EXTRA) as StudentAssignment).assignment_id.toString())
-        data=intent.getSerializableExtra("Complete") as Complete?
+        topic = intent.getStringExtra(EXTRA_TOPIC)
+        mark=intent.getIntExtra(EXTRA_MARK,0)
 
 
-        var assList = emptyList<StudentAssignment>()
-       assList = data!!.student_assignments
-       assignmentTitle.text= data?.topic
+
+        assignmentTitle.text =topic
         //teacherName.text= data?.teacher_id.toString()
-        mark.text= assList[0].mark.toString()
+        tvmark.text = mark.toString()
         arrow.setOnClickListener {
             onBackPressed()
             true
         }
-
-
 
 
     }

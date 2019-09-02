@@ -1,7 +1,6 @@
 package com.example.talentmanagementsystem.data.models
 
 import android.content.Context
-import com.example.talentmanagementsystem.network_response.Login.Data
 
 class SharedPreference(context: Context) {
     private val sharedPreference = context.getSharedPreferences(PREFERENCENAME, Context.MODE_PRIVATE)
@@ -15,10 +14,13 @@ class SharedPreference(context: Context) {
         const val EMAIL = "email"
         const val ADDRESS = "address"
         const val PHONE = "phone"
-        const val MODULE = "module"
         const val DOB = "dob"
         const val PHOTO = "photo"
         const val PASSWORD="password"
+        const val BATCH_NO="batchno"
+        const val MODULE_NAME="modulename"
+        const val PROFILE="profile"
+
         private var instance: SharedPreference? = null
 
         fun getInstance(context: Context): SharedPreference {
@@ -73,8 +75,8 @@ class SharedPreference(context: Context) {
         sharedPreference.edit().putString(ADDRESS, address).apply()
     }
 
-    fun saveModule(module: String) {
-        sharedPreference.edit().putString(MODULE, module).apply()
+    fun saveProfile(profile: String) {
+        sharedPreference.edit().putString(PROFILE, profile).apply()
     }
 
     fun saveDate(dob: String) {
@@ -84,8 +86,12 @@ class SharedPreference(context: Context) {
     fun savePhoto(photo: String) {
         sharedPreference.edit().putString(PHOTO, photo).apply()
     }
-
-
+    fun saveBatchNo(batchid: String) {
+        sharedPreference.edit().putString(BATCH_NO, batchid).apply()
+    }
+    fun saveModuleName(moduleName: String) {
+        sharedPreference.edit().putString(MODULE_NAME, moduleName).apply()
+    }
     fun getUserName(): String {
         return sharedPreference.getString(NAME, "").toString()
     }
@@ -106,8 +112,8 @@ class SharedPreference(context: Context) {
         return sharedPreference.getString(PHOTO, "").toString()
     }
 
-    fun getModule(): String {
-        return sharedPreference.getString(MODULE,"").toString()
+    fun getProfile(): String {
+        return sharedPreference.getString(PROFILE, "").toString()
     }
 
     fun getDob(): String {
@@ -129,5 +135,11 @@ class SharedPreference(context: Context) {
     fun getPassword():String
     {
         return sharedPreference.getString(PASSWORD,"").toString()
+    }
+    fun getBatchNo(): String {
+        return sharedPreference.getString(BATCH_NO, "").toString()
+    }
+    fun getModuleName(): String {
+        return sharedPreference.getString(MODULE_NAME, "").toString()
     }
 }

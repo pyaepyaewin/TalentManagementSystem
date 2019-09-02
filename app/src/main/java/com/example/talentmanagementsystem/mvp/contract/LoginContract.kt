@@ -1,6 +1,5 @@
 package com.example.talentmanagementsystem.mvp.contract
 
-import android.os.Message
 import com.example.talentmanagementsystem.network_response.Login.Data
 
 interface LoginContract {

@@ -4,8 +4,6 @@ import android.content.Context
 import com.example.talentmanagementsystem.data.models.LoginModel
 import com.example.talentmanagementsystem.data.models.SharedPreference
 import com.example.talentmanagementsystem.mvp.contract.LoginContract
-import com.example.talentmanagementsystem.network_response.Login.Data
-import com.example.talentmanagementsystem.network_response.Login.LoginResponse
 
 class LoginPresenterImpl(val context: Context) : LoginContract.LoginPresenter {
     private lateinit var loginView: LoginContract.LoginView

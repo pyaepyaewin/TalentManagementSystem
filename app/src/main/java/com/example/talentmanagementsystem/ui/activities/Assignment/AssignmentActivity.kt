@@ -17,13 +17,18 @@ import com.example.talentmanagementsystem.ui.activities.Activity.DetailActivitie
 import com.example.talentmanagementsystem.ui.adapter.adapters.DelegateAdapter
 //import com.example.talentmanagementsystem.ui.adapter.adapters.DelegateAdapter
 import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ItemDisplayer
+import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.onClickItem
 import kotlinx.android.synthetic.main.activity_assignment.*
 
-class AssignmentActivity : AppCompatActivity(),AssignmentContract.AssignmentView
+class AssignmentActivity : AppCompatActivity(),AssignmentContract.AssignmentView,onClickItem
+
+
 {
+
+
     private lateinit var assignmentList: List<Data>
     private val mAdapter: DelegateAdapter =
-        DelegateAdapter(this::onClickNoticeListItem)
+        DelegateAdapter()
     private val mPresenter: AssignmentContract.AssignmentPresenter by lazy {
         AssignmentPresenterImpl(this)
     }
@@ -47,11 +52,10 @@ class AssignmentActivity : AppCompatActivity(),AssignmentContract.AssignmentView
     override fun showAssignmentList(displayerList: MutableList<ItemDisplayer>) {
         mAdapter.setData(displayerList)
     }
-    private fun onClickNoticeListItem(data : Complete)
-    {
-// Toast.makeText(applicationContext, "You clicked at ${data.student_assignments[assignment_id]}", Toast.LENGTH_SHORT).show()
-      intent=
-            AssignmentDetailActivity.newIntent(this,data)
-       startActivity(intent)
-    }
+
+
+    override fun onClick(data: Complete) {
+        intent=
+            AssignmentDetailActivity.newIntent(this,data.topic,data.student_assignments[0].mark)
+        startActivity(intent)    }
 }

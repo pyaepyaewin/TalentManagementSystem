@@ -21,16 +21,28 @@
                 android:src="@drawable/arrow"
                 android:scaleType="center"/>
     </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView android:layout_width="100dp"
-                                       android:layout_height="100dp"
-                                       app:cardCornerRadius="50dp"
-                                       android:layout_centerHorizontal="true" android:layout_marginTop="50dp">
-        <ImageView
-                android:id="@+id/userProfile"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/avi"/>
-    </androidx.cardview.widget.CardView>
+    <!--<androidx.cardview.widget.CardView android:layout_width="100dp"-->
+                                       <!--android:layout_height="100dp"-->
+                                       <!--app:cardCornerRadius="50dp"-->
+                                       <!--android:layout_centerHorizontal="true" android:layout_marginTop="50dp">-->
+        <!--<ImageView-->
+                <!--android:id="@+id/userProfile"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:src="@drawable/person"-->
+                <!--/>-->
+    <!--</androidx.cardview.widget.CardView>-->
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="100dp"
+                android:src="@drawable/person"
+            android:layout_height="100dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+
+
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="50dp"/>
     <androidx.cardview.widget.CardView
             android:layout_width="25dp"
             android:layout_height="25dp"

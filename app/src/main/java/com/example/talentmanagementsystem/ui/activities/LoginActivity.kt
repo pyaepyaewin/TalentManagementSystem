@@ -6,17 +6,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import com.example.talentmanagementsystem.R
-import com.example.talentmanagementsystem.data.models.LoginModel
 import com.example.talentmanagementsystem.data.models.SharedPreference
 import com.example.talentmanagementsystem.mvp.contract.LoginContract
 import com.example.talentmanagementsystem.mvp.presenter.LoginPresenterImpl
+import com.example.talentmanagementsystem.network_response.Login.Batch
 import com.example.talentmanagementsystem.network_response.Login.Data
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.btnRegister
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_register.*
 
 class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
     val preference = SharedPreference.getInstance(this)
@@ -55,7 +52,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
 
     }
 
-    override fun loginSuccess(user:Data) {
+    override fun loginSuccess(user: Data) {
 //        intent = Intent(this, MainActivity::class.java)
 //        intent.putExtra("Data",user)
 //        startActivity(intentent)
@@ -68,14 +65,17 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
         var password=edtPassword.text.toString()
        // var module = user.module
         var photo = user.photo
+        var batch_no=user.batch.batch_no
+        var module=user.module.name
         preference.saveUserName(userName)
         preference.saveEmail(email)
         preference.saveAddress(address)
         preference.savePhone(phone)
         preference.saveDate(date)
-       // preference.saveModule(module)
         preference.savePhoto(photo)
         preference.savePassword(password)
+        preference.saveBatchNo(batch_no)
+        preference.saveModuleName(module)
 
         val intent = MainActivity.newIntent(this)
         startActivity(intent)

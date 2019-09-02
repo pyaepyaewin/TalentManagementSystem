@@ -6,17 +6,11 @@ import com.example.talentmanagementsystem.network_response.AssignmentResponse.Co
 import kotlinx.android.synthetic.main.finishedassignment.view.*
 
 class AssignmentViewHolder(
-    private val view: View,
-    private val onClickItem: (ass: Complete) -> Unit
+    private val view: View
 ) : RecyclerView.ViewHolder(view) {
     fun setData(ass: Complete) {
         view.apply {
             assignmentTitle.text = ass.topic
-            /* time.text = data.activity_date
-            Picasso.get().load(data.image).into(view.image)*/
-            setOnClickListener {
-                onClickItem(ass)
-            }
         }
 
     }

@@ -1,5 +1,6 @@
 package com.example.talentmanagementsystem.ui.adapter.displayer.Assignment
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.View
@@ -9,21 +10,20 @@ import com.example.talentmanagementsystem.network_response.AssignmentResponse.St
 import com.example.talentmanagementsystem.ui.activities.Assignment.AssignmentDetailActivity
 import kotlinx.android.synthetic.main.finishedassignment.view.*
 
-class FinishAssignmentDisplayer(val context: Context,val data: Complete): ItemDisplayer {
+class FinishAssignmentDisplayer(val context: Context,val data: Complete): ItemDisplayer,onClickItem {
+    override fun onClick(data: Complete) {
+    }
+
     override fun bind(itemView: View) {
         itemView.assignmentTitle.text = data.topic
         itemView.date.text = data.due_date
         itemView.setOnClickListener {
-            goToDetailActivity(data)
+            onClick(data)
         }
     }
-    private fun goToDetailActivity(data : Complete){
-        //val intent=(this,AssignmentDetailActivity::class.java,)
-       val intent= Intent(context,AssignmentDetailActivity::class.java)
-        intent.putExtra("Complete",data)
-
-    }
-
     override fun getViewType(): ViewType = ViewType.FINISH
 
+}
+interface  onClickItem{
+    fun onClick(data: Complete)
 }

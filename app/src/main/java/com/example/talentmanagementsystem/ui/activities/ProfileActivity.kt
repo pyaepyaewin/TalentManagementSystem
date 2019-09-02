@@ -3,22 +3,19 @@ package com.example.talentmanagementsystem.ui.activities
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Log
 import android.view.WindowManager
+import com.bumptech.glide.Glide
 import com.example.talentmanagementsystem.R
 import com.example.talentmanagementsystem.data.models.SharedPreference
 import com.example.talentmanagementsystem.mvp.contract.ProfileContract
 import com.example.talentmanagementsystem.mvp.presenter.ProfilePresenterImpl
-import com.example.talentmanagementsystem.network_response.Login.Data
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity(),ProfileContract.ProfileView {
+    lateinit var thumb:Uri
     companion object {
         val REQUEST_IMAGE_CAPTURE = 1
         fun newIntent(context: Context): Intent {
@@ -48,7 +45,8 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.ProfileView {
             onBackPressed()
             true
         }
-        track.text= SharedPreference.getInstance(this).getModule()
+        track.text= SharedPreference.getInstance(this).getModuleName()
+        batch.text=SharedPreference.getInstance(this).getBatchNo()
         dob.text=SharedPreference.getInstance(this).getDob()
         name.text= SharedPreference.getInstance(this).getUserName()
         email.text= SharedPreference.getInstance(this).getEmail()
@@ -65,37 +63,25 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.ProfileView {
             goToChangePasswordPage()
         }
 
-edit.setOnClickListener {
+        edit.setOnClickListener {
 
-        val intent = Intent(Intent.ACTION_GET_CONTENT)
+            val intent = Intent(Intent.ACTION_GET_CONTENT)
 
-        intent.type = "image/*"
+            intent.type = "image/*"
 
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
+            }
+//            var profile=edit.setImageURI(thumb).toString()
+//            SharedPreference.getInstance(this).saveProfile(profile)
         }
 
-    //val locationForPhotos: Uri
-//
-//    fun capturePhoto(targetFilename: String) {
-//        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
-//            putExtra(MediaStore.EXTRA_OUTPUT, Uri.withAppendedPath(locationForPhotos, targetFilename))
-//        }
-//        if (intent.resolveActivity(packageManager) != null) {
-//            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
-//        }
-//    }
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
-//        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
-//            val thumbnail: Bitmap = data.getParcelableExtra("data")
-//            // Do other work with full size photo saved in locationForPhotos
-//            ...
-//        }
-//    }
-
-
 }
-}
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 
+        thumb= data!!.data!!
+        Glide.with(this).load(thumb).into(profile)
+
+    }
 
     }

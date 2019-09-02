@@ -81,7 +81,7 @@
                     android:textSize="15sp"
             android:textColor="@color/grey"/>
             <TextView
-                    android:id="@+id/mark"
+                    android:id="@+id/tvmark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="70"

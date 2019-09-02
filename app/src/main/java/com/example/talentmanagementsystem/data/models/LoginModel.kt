@@ -1,14 +1,10 @@
 package com.example.talentmanagementsystem.data.models
 
-import android.content.Context
-import android.provider.ContactsContract
-import com.example.talentmanagementsystem.database.LoginDataClass
-import com.example.talentmanagementsystem.network_response.Activity.ActivityResponse
+import android.util.Log
 import com.example.talentmanagementsystem.network_response.Login.LoginResponse
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import okhttp3.internal.Internal.instance
 
 class LoginModel : BaseModel() {
 
@@ -40,6 +36,7 @@ class LoginModel : BaseModel() {
 
                     }, {
                         onError(it)
+                        Log.d("faillogin",it.localizedMessage)
                     })
             )
         }
