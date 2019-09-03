@@ -53,7 +53,7 @@ class ProfileActivity : AppCompatActivity(),ProfileContract.ProfileView {
         phNum.text=SharedPreference.getInstance(this).getPhone()
         address.text=SharedPreference.getInstance(this).getAddress()
         //Picasso.get().load(SharedPreference.getInstance(this).getPhoto()).into(userProfile)
-
+        Glide.with(this).load(SharedPreference.getInstance(this).getPhoto()).into(profile)
 
         btnLogout.setOnClickListener {
             goToLoginPage()

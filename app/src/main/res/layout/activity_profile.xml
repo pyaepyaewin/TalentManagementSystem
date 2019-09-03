@@ -6,7 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.activities.ProfileActivity"
-        android:background="@drawable/color">
+        android:background="@drawable/color"
+        android:layout_gravity="center">
     <androidx.cardview.widget.CardView
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -71,41 +72,63 @@
             android:layout_centerHorizontal="true"
 
     />
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Track"
-              android:fontFamily="@font/apercu_regular"
-              android:textSize="17sp"
-              android:textColor="#fff"
-              android:layout_marginTop="200dp"
-              android:layout_marginStart="130dp"
-    />
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Batch"
-              android:fontFamily="@font/apercu_regular"
-              android:textSize="17sp"
-              android:layout_marginTop="200dp"
-              android:textColor="#fff"
-              android:layout_marginStart="220dp"/>
-    <TextView
-            android:id="@+id/track"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PHP"
-            android:fontFamily="@font/apercu_regular"
-            android:textSize="20sp"
-            android:layout_marginTop="230dp"
-            android:layout_marginStart="130dp"/>
-    <TextView
-            android:id="@+id/batch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:fontFamily="@font/apercu_regular"
-            android:textSize="20sp"
-            android:layout_marginTop="230dp"
-            android:layout_marginStart="235dp"/>
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+    android:orientation="horizontal"
+                  android:weightSum="2"
+  android:gravity="center">
+        <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Track"
+                  android:fontFamily="@font/apercu_regular"
+                  android:textSize="17sp"
+                  android:textColor="#fff"
+                  android:layout_marginTop="200dp"
+                  android:layout_marginStart="100dp"
+        />
+        <TextView
+                android:id="@+id/track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"
+                android:fontFamily="@font/apercu_regular"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="80dp"/>
+    </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_weight="1"
+        android:layout_gravity="center">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Batch"
+                      android:fontFamily="@font/apercu_regular"
+                      android:textSize="17sp"
+                      android:layout_marginTop="200dp"
+                      android:textColor="#fff"/>
+                      //android:layout_marginStart="70dp"/>
+
+            <TextView
+                    android:id="@+id/batch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:fontFamily="@font/apercu_regular"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="480dp"
                   android:background="@drawable/maincorner"

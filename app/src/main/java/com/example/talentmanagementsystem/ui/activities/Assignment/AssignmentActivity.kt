@@ -17,10 +17,10 @@ import com.example.talentmanagementsystem.ui.activities.Activity.DetailActivitie
 import com.example.talentmanagementsystem.ui.adapter.adapters.DelegateAdapter
 //import com.example.talentmanagementsystem.ui.adapter.adapters.DelegateAdapter
 import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.ItemDisplayer
-import com.example.talentmanagementsystem.ui.adapter.displayer.Assignment.onClickItem
+
 import kotlinx.android.synthetic.main.activity_assignment.*
 
-class AssignmentActivity : AppCompatActivity(),AssignmentContract.AssignmentView,onClickItem
+class AssignmentActivity : AppCompatActivity(),AssignmentContract.AssignmentView
 
 
 {
@@ -53,9 +53,11 @@ class AssignmentActivity : AppCompatActivity(),AssignmentContract.AssignmentView
         mAdapter.setData(displayerList)
     }
 
-
-    override fun onClick(data: Complete) {
-        intent=
+    override fun showDetailAssignmentList(data: Complete) {
+        val assignmentIntent=
             AssignmentDetailActivity.newIntent(this,data.topic,data.student_assignments[0].mark)
-        startActivity(intent)    }
+        startActivity(assignmentIntent)
+    }
+
+
 }

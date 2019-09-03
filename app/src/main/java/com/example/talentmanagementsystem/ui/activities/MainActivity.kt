@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import com.bumptech.glide.Glide
 import com.example.talentmanagementsystem.R
 import com.example.talentmanagementsystem.data.models.SharedPreference
 import com.example.talentmanagementsystem.mvp.contract.MainContract
@@ -75,9 +76,9 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
         mainPresenter.attachView(this)
         userName.text=SharedPreference.getInstance(this).getUserName()
 
-       //     Picasso.get().load(profile_link).into(profile)
-
-        cardProfile.setOnClickListener {
+//       profile.setImageResource(SharedPreference.getInstance(this).getPhoto().toInt())
+        Glide.with(this).load(SharedPreference.getInstance(this).getPhoto()).into(profile)
+        profile.setOnClickListener {
 
             goToProfilePage()
 

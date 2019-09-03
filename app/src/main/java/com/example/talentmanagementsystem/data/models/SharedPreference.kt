@@ -75,9 +75,9 @@ class SharedPreference(context: Context) {
         sharedPreference.edit().putString(ADDRESS, address).apply()
     }
 
-    fun saveProfile(profile: String) {
-        sharedPreference.edit().putString(PROFILE, profile).apply()
-    }
+//    fun saveProfile(profile: String) {
+//        sharedPreference.edit().putString(PROFILE, profile).apply()
+//    }
 
     fun saveDate(dob: String) {
         sharedPreference.edit().putString(DOB, dob).apply()
@@ -112,9 +112,9 @@ class SharedPreference(context: Context) {
         return sharedPreference.getString(PHOTO, "").toString()
     }
 
-    fun getProfile(): String {
-        return sharedPreference.getString(PROFILE, "").toString()
-    }
+//    fun getProfile(): String {
+//        return sharedPreference.getString(PROFILE, "").toString()
+//    }
 
     fun getDob(): String {
         return sharedPreference.getString(DOB,"").toString()

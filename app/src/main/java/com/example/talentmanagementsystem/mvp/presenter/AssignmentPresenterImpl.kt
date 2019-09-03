@@ -39,7 +39,7 @@ class AssignmentPresenterImpl(val context: Context):AssignmentContract.Assignmen
             mItemList.add(TitleDisplayer("Complete"))
             val finishDataList = it.data.complete
             for(data in finishDataList) {
-                mItemList.add(FinishAssignmentDisplayer(context,data))
+                mItemList.add(FinishAssignmentDisplayer(context,data,this::onClickFinishAssignment))
             }
             assignmentView.showAssignmentList(mItemList)
         }
@@ -47,5 +47,9 @@ class AssignmentPresenterImpl(val context: Context):AssignmentContract.Assignmen
 
         }
             ,"Bearer $token",id)
+    }
+
+    fun onClickFinishAssignment(data:Complete){
+       assignmentView.showDetailAssignmentList(data)
     }
 }

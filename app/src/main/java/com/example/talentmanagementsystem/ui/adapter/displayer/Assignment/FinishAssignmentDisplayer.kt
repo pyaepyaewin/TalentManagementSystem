@@ -10,9 +10,7 @@ import com.example.talentmanagementsystem.network_response.AssignmentResponse.St
 import com.example.talentmanagementsystem.ui.activities.Assignment.AssignmentDetailActivity
 import kotlinx.android.synthetic.main.finishedassignment.view.*
 
-class FinishAssignmentDisplayer(val context: Context,val data: Complete): ItemDisplayer,onClickItem {
-    override fun onClick(data: Complete) {
-    }
+class FinishAssignmentDisplayer(val context: Context,val data: Complete,val onClick:(data:Complete)->Unit): ItemDisplayer {
 
     override fun bind(itemView: View) {
         itemView.assignmentTitle.text = data.topic
@@ -23,7 +21,4 @@ class FinishAssignmentDisplayer(val context: Context,val data: Complete): ItemDi
     }
     override fun getViewType(): ViewType = ViewType.FINISH
 
-}
-interface  onClickItem{
-    fun onClick(data: Complete)
 }
