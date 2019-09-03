@@ -57,7 +57,7 @@ android:orientation="vertical">
             android:layout_marginStart="20dp"/>
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSchedule"
-            android:layout_width="395dp"
+            android:layout_width="match_parent"
             android:layout_height="715dp"
             tools:layout_editor_absoluteY="8dp"
             tools:layout_editor_absoluteX="8dp"

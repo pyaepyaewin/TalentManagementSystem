@@ -36,10 +36,10 @@
     />
     <EditText
             android:id="@+id/edtEmail"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_margin="20dp"
             android:hint="Email"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -49,10 +49,11 @@
             android:background="@drawable/edittextround"/>
     <EditText
             android:id="@+id/edtPassword"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:hint="Password"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -63,22 +64,26 @@
             android:background="@drawable/edittextround"/>
     <Button
             android:id="@+id/btnLogin"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:background="@drawable/buttonround"
-            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
             android:text="Log in"
             android:textAllCaps="false"
             android:fontFamily="@font/apercu_regular"
             android:textColor="@color/colorGradient"/>
     <Button
             android:id="@+id/btnRegister"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:background="@drawable/buttonround"
-            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
             android:text="Register"
             android:textAllCaps="false"
             android:fontFamily="@font/apercu_regular"

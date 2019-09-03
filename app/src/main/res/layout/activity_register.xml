@@ -41,10 +41,13 @@
         />
         <EditText
             android:id="@+id/edtName"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+
             android:hint="name"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -54,10 +57,12 @@
             android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtEmail1"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
                 android:hint="email"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
@@ -67,10 +72,12 @@
                 android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtPassword1"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:hint="password"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
@@ -80,11 +87,13 @@
                 android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtConfirmPassword"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:fontFamily="@font/apercu_light"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
                 android:hint="confirm password"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
@@ -93,10 +102,12 @@
                 android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtPhone"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:hint="phone"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
@@ -106,20 +117,24 @@
                 android:background="@drawable/edittextround"/>
         <Spinner
                 android:id="@+id/spinner"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
               android:background="@drawable/edittextround"
                 android:layout_marginTop="15dp"
 
         />
         <EditText
                 android:id="@+id/edtDob"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:fontFamily="@font/apercu_light"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:hint="date of birth (YYY/MM/DD)"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
@@ -128,7 +143,7 @@
                 android:background="@drawable/edittextround"/>
         <EditText
                 android:id="@+id/edtAddress"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
@@ -138,13 +153,17 @@
                 android:paddingLeft="15dp"
                 android:paddingBottom="50dp"
                 android:textSize="20sp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:fontFamily="@font/apercu_light"
                 android:background="@drawable/edittextround"/>
         <Button
                 android:id="@+id/btnRegister"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:background="@drawable/buttonround"
                 android:layout_marginTop="15dp"
                 android:text="Register"

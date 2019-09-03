@@ -55,7 +55,7 @@ android:orientation="vertical">
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTeacher"
-            android:layout_width="395dp"
+            android:layout_width="match_parent"
             android:layout_height="625dp"
             tools:layout_editor_absoluteY="98dp"
             tools:layout_editor_absoluteX="8dp"

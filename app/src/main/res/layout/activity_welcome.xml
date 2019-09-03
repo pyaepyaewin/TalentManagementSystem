@@ -37,8 +37,10 @@
     />
     <Button
             android:id="@+id/btnStart"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
             android:layout_gravity="center"
             android:background="@drawable/buttonround"
             android:layout_marginTop="80dp"

@@ -23,32 +23,32 @@
                 android:scaleType="center"/>
     </androidx.cardview.widget.CardView>
     <!--<androidx.cardview.widget.CardView android:layout_width="100dp"-->
-                                       <!--android:layout_height="100dp"-->
-                                       <!--app:cardCornerRadius="50dp"-->
-                                       <!--android:layout_centerHorizontal="true" android:layout_marginTop="50dp">-->
-        <!--<ImageView-->
-                <!--android:id="@+id/userProfile"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:src="@drawable/person"-->
-                <!--/>-->
+    <!--android:layout_height="100dp"-->
+    <!--app:cardCornerRadius="50dp"-->
+    <!--android:layout_centerHorizontal="true" android:layout_marginTop="50dp">-->
+    <!--<ImageView-->
+    <!--android:id="@+id/userProfile"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:src="@drawable/person"-->
+    <!--/>-->
     <!--</androidx.cardview.widget.CardView>-->
     <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile"
             android:layout_width="100dp"
-                android:src="@drawable/person"
+            android:src="@drawable/person"
             android:layout_height="100dp"
             app:civ_border_color="@color/white"
             app:civ_border_width="2dp"
 
 
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="50dp"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
     <androidx.cardview.widget.CardView
             android:layout_width="25dp"
             android:layout_height="25dp"
             app:cardCornerRadius="15dp"
-            android:layout_marginStart="220dp"
+            android:layout_marginStart="200dp"
             android:layout_marginTop="120dp"
 
     >
@@ -72,47 +72,50 @@
             android:layout_centerHorizontal="true"
 
     />
-    <LinearLayout android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-    android:orientation="horizontal"
-                  android:weightSum="2"
-  android:gravity="center">
-        <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1">
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Track"
-                  android:fontFamily="@font/apercu_regular"
-                  android:textSize="17sp"
-                  android:textColor="#fff"
-                  android:layout_marginTop="200dp"
-                  android:layout_marginStart="100dp"
-        />
-        <TextView
-                android:id="@+id/track"
-                android:layout_width="wrap_content"
+    <LinearLayout
+            android:layout_below="@id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:gravity="center">
+        <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PHP"
-                android:fontFamily="@font/apercu_regular"
-                android:textSize="20sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="80dp"/>
-    </LinearLayout>
-        <LinearLayout android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+            <TextView android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:orientation="vertical"
-                      android:layout_weight="1"
-        android:layout_gravity="center">
+                      android:text="Track"
+                      android:fontFamily="@font/apercu_regular"
+                      android:textSize="17sp"
+                      android:textColor="#fff"
+                      android:layout_marginBottom="5dp"
+            />
+            <TextView
+                    android:id="@+id/track"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHP"
+                    android:fontFamily="@font/apercu_regular"
+                    android:textSize="20sp"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_gravity="center">
             <TextView android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:text="Batch"
                       android:fontFamily="@font/apercu_regular"
                       android:textSize="17sp"
-                      android:layout_marginTop="200dp"
-                      android:textColor="#fff"/>
-                      //android:layout_marginStart="70dp"/>
+                      android:textColor="#fff"
+            android:layout_marginBottom="5dp"/>
 
             <TextView
                     android:id="@+id/batch"
@@ -120,9 +123,7 @@
                     android:layout_height="wrap_content"
                     android:text="1"
                     android:fontFamily="@font/apercu_regular"
-                    android:textSize="20sp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="20dp"/>
+                    android:textSize="20sp"/>
         </LinearLayout>
 
 
@@ -215,15 +216,17 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="20dp"/>
         </LinearLayout>
-        <androidx.cardview.widget.CardView android:layout_width="300dp"
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
                                            android:layout_height="50dp"
                                            android:layout_marginTop="30dp"
+android:layout_marginLeft="50dp"
+                                           android:layout_marginRight="50dp"
                                            android:layout_gravity="center"
                                            app:cardCornerRadius="10dp"
         >
             <Button
                     android:id="@+id/btnChangePsw"
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Change Password"
                     android:fontFamily="@font/apercu_regular"
@@ -233,15 +236,17 @@
 
             />
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView android:layout_width="300dp"
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
                                            android:layout_height="50dp"
+                                           android:layout_marginLeft="50dp"
+                                           android:layout_marginRight="50dp"
                                            android:layout_marginTop="20dp"
                                            android:layout_gravity="center"
                                            app:cardCornerRadius="10dp"
         >
             <Button
                     android:id="@+id/btnLogout"
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Log Out"
                     android:fontFamily="@font/apercu_regular"
