@@ -16,7 +16,8 @@
                 app:cardCornerRadius="25dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginStart="30dp"
-                app:cardBackgroundColor="@color/backColor">
+                app:cardBackgroundColor="@color/backColor"
+        >
             <ImageView
                     android:id="@+id/arrow"
                     android:layout_width="40dp"
@@ -29,7 +30,7 @@
                   android:text="Assignment"
                   android:fontFamily="@font/apercu_bold"
                   android:textSize="30sp"
-                  android:layout_marginStart="30dp"
+                  android:layout_marginStart="20dp"
                   android:layout_marginTop="35dp"/>
         <!--<androidx.cardview.widget.CardView-->
         <!--android:layout_width="70dp"-->
@@ -58,7 +59,7 @@
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAssignment"
             android:layout_width="match_parent"
-            android:layout_height="715dp"
+            android:layout_height="wrap_content"
 
     />
 </ScrollView>

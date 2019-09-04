@@ -32,14 +32,14 @@ android:orientation="vertical">
                   android:text="Feedback"
                   android:fontFamily="@font/apercu_bold"
                   android:textSize="30sp"
-                  android:layout_marginStart="30dp"
+                  android:layout_marginStart="20dp"
                   android:layout_marginTop="35dp"/>
         <androidx.cardview.widget.CardView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 app:cardCornerRadius="50dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="60dp"
+                android:layout_marginStart="40dp"
         >
             <ImageView android:layout_width="match_parent"
                        android:layout_height="match_parent"

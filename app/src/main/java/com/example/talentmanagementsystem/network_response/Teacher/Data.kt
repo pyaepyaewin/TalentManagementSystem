@@ -16,4 +16,5 @@ data class Data(
     val photo: Any,
     val position: String,
     val updated_at: Any,
-    val verified: Int)
+    val verified: Int
+): Serializable

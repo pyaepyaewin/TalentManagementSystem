@@ -3,7 +3,6 @@ package com.example.talentmanagementsystem.network_response
 import com.example.talentmanagementsystem.network_response.Activity.ActivityResponse
 import com.example.talentmanagementsystem.network_response.AssignmentResponse.AssignmentResponse
 import com.example.talentmanagementsystem.network_response.ChangePasw.ChangePasswordResponse
-import com.example.talentmanagementsystem.network_response.ChangePhoto.ChangePhotoResponse
 import com.example.talentmanagementsystem.network_response.FeedBack.GetFeedBack.FeedbackResponse
 import com.example.talentmanagementsystem.network_response.FeedBack.PostFeedFack.PostFeedbackResponse
 import com.example.talentmanagementsystem.network_response.Login.LoginResponse

@@ -21,9 +21,9 @@ class TeacherModel:BaseModel() {
         }
     }
     fun loadTeacherData(token:String,
-        id:Int,
-        onSuccess: (response: TeacherResponse) -> Unit,
-        onError: (error: Throwable) -> Unit
+                        id:Int,
+                        onSuccess: (response: TeacherResponse) -> Unit,
+                        onError: (error: Throwable) -> Unit
     ) {
         disposable.add(
             mApiService.loadTeacherData(token,id).subscribeOn(Schedulers.io())

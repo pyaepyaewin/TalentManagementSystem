@@ -5,13 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.talentmanagementsystem.R
-import com.example.talentmanagementsystem.data.models.SharedPreference
-import com.example.talentmanagementsystem.database.TeacherDataClass
 import com.example.talentmanagementsystem.mvp.contract.TeacherContract
 import com.example.talentmanagementsystem.mvp.presenter.TeacherPresenterImpl
 import com.example.talentmanagementsystem.network_response.Teacher.Data
 import com.example.talentmanagementsystem.ui.adapter.adapters.TeacherAdapter
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_teacher.*
 
 class TeacherActivity : AppCompatActivity(), TeacherContract.TeacherView {
@@ -34,7 +31,7 @@ class TeacherActivity : AppCompatActivity(), TeacherContract.TeacherView {
 
     private fun onClickNoticeListItem(data: Data) {
         Toast.makeText(applicationContext, "You clicked at ${data.name}", Toast.LENGTH_SHORT).show()
-        intent = TeacherDetailActivity.newIntent(this, data)
+        intent = TeacherDetailActivity.newIntent(this, data.name,data.position,data.email)
         startActivity(intent)
     }
 

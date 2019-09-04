@@ -1,7 +1,7 @@
 package com.example.talentmanagementsystem.network_response.Register
 
 data class RegisterResponse(
-    val `data`: Data,
+    val data: Data,
     val code: Int,
     val duration: Double,
     val errors: Errors,

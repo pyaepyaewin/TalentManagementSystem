@@ -11,7 +11,7 @@ class FeedbackViewHolder( private val view: View)
         view.apply {
             feedbackTitle.text = data.title
             issue.text = data.description
-          //date need
+          //date.text=data.created_at.toString()
 
 
         }

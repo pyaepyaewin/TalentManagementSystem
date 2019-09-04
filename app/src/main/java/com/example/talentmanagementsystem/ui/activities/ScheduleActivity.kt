@@ -29,9 +29,12 @@ class ScheduleActivity : AppCompatActivity() {
         }
         var schedule1 = ScheduleDataClass("10am-12pm", "Normalization", "Tr Chaw Chaw Lay", "duration 2:00")
        var schedule2 = ScheduleDataClass("1pm-4pm", "PHP refactor", "Tr Hla Hla Lay", "duration 3:00")
-        var schedule3 = ScheduleDataClass("10am-12pm", "Database basic", "Tr Chaw Chaw Lay", "duration 2:00")
+        var schedule3 = ScheduleDataClass("12pm-2pm", "Database basic", "Tr Chaw Chaw Lay", "duration 2:00")
+        var schedule4 = ScheduleDataClass("9am-12pm", "Design", "Tr Chaw Chaw Lay", "duration 3:00")
+        var schedule5 = ScheduleDataClass("1pm-4pm", "Api", "Tr Hla Hla Lay", "duration 3:00")
 
-       var todaySchedule = mutableListOf<ScheduleDataClass>(schedule1, schedule2, schedule3)
+
+       var todaySchedule = mutableListOf<ScheduleDataClass>(schedule1, schedule2, schedule3,schedule4,schedule5)
 
         var adapter = ScheduleDelegateAdapter(this, R.layout.todayschedule, todaySchedule)
         rvSchedule.layoutManager= LinearLayoutManager(applicationContext)
